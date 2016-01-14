@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050024561C1238BB005E8313 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050024551C1238BB005E8313 /* AppDelegate.m */; };
+		050024591C1238BB005E8313 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 050024581C1238BB005E8313 /* main.m */; };
+		0500245C1C1238BB005E8313 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500245B1C1238BB005E8313 /* ViewController.m */; };
+		0500245E1C1238BB005E8313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0500245D1C1238BB005E8313 /* Assets.xcassets */; };
+		050024611C1238BB005E8313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0500245F1C1238BB005E8313 /* Main.storyboard */; };
+		0500246C1C1238BC005E8313 /* PopupInStatusBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500246B1C1238BC005E8313 /* PopupInStatusBarTests.m */; };
+		050024771C1238BC005E8313 /* PopupInStatusBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 050024761C1238BC005E8313 /* PopupInStatusBarUITests.m */; };
+		0540C37B1C12400500243CF1 /* PSBBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540C37A1C12400500243CF1 /* PSBBgView.m */; };
+		0540C37E1C12440100243CF1 /* PSBPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540C37D1C12440100243CF1 /* PSBPanel.m */; };
+		0540C3811C12487700243CF1 /* PSBStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0540C3801C12487700243CF1 /* PSBStatusItemView.m */; };
+		059E37771C299D4000ABC042 /* PSBMenuBarCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E37761C299D4000ABC042 /* PSBMenuBarCtrl.m */; };
+		059E377A1C29A53100ABC042 /* PSBPanelCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E37791C29A53100ABC042 /* PSBPanelCtrl.m */; };
+		059E37801C29C11500ABC042 /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059E377E1C29C11500ABC042 /* Panel.xib */; };
+		B4CB88951C3E295F00809392 /* PSBPopupInStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB88941C3E295F00809392 /* PSBPopupInStatusBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		050024681C1238BC005E8313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050024491C1238BB005E8313 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050024501C1238BB005E8313;
+			remoteInfo = PopupInStatusBar;
+		};
+		050024731C1238BC005E8313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050024491C1238BB005E8313 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 050024501C1238BB005E8313;
+			remoteInfo = PopupInStatusBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050024511C1238BB005E8313 /* PopupInStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopupInStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		050024541C1238BB005E8313 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		050024551C1238BB005E8313 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		050024581C1238BB005E8313 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0500245A1C1238BB005E8313 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0500245B1C1238BB005E8313 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0500245D1C1238BB005E8313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		050024601C1238BB005E8313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		050024621C1238BC005E8313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		050024671C1238BC005E8313 /* PopupInStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopupInStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0500246B1C1238BC005E8313 /* PopupInStatusBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupInStatusBarTests.m; sourceTree = "<group>"; };
+		0500246D1C1238BC005E8313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		050024721C1238BC005E8313 /* PopupInStatusBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopupInStatusBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		050024761C1238BC005E8313 /* PopupInStatusBarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupInStatusBarUITests.m; sourceTree = "<group>"; };
+		050024781C1238BC005E8313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0540C3791C12400500243CF1 /* PSBBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBBgView.h; path = Classes/PSBBgView.h; sourceTree = "<group>"; };
+		0540C37A1C12400500243CF1 /* PSBBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBBgView.m; path = Classes/PSBBgView.m; sourceTree = "<group>"; };
+		0540C37C1C12440100243CF1 /* PSBPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPanel.h; path = Classes/PSBPanel.h; sourceTree = "<group>"; };
+		0540C37D1C12440100243CF1 /* PSBPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPanel.m; path = Classes/PSBPanel.m; sourceTree = "<group>"; };
+		0540C37F1C12487700243CF1 /* PSBStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBStatusItemView.h; path = Classes/PSBStatusItemView.h; sourceTree = "<group>"; };
+		0540C3801C12487700243CF1 /* PSBStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBStatusItemView.m; path = Classes/PSBStatusItemView.m; sourceTree = "<group>"; };
+		059E37751C299D4000ABC042 /* PSBMenuBarCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBMenuBarCtrl.h; path = Classes/PSBMenuBarCtrl.h; sourceTree = "<group>"; };
+		059E37761C299D4000ABC042 /* PSBMenuBarCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBMenuBarCtrl.m; path = Classes/PSBMenuBarCtrl.m; sourceTree = "<group>"; };
+		059E37781C29A53100ABC042 /* PSBPanelCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPanelCtrl.h; path = Classes/PSBPanelCtrl.h; sourceTree = "<group>"; };
+		059E37791C29A53100ABC042 /* PSBPanelCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPanelCtrl.m; path = Classes/PSBPanelCtrl.m; sourceTree = "<group>"; };
+		059E377F1C29C11500ABC042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Panel.xib; sourceTree = "<group>"; };
+		B4CB88931C3E295F00809392 /* PSBPopupInStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPopupInStatusBar.h; path = Classes/PSBPopupInStatusBar.h; sourceTree = "<group>"; };
+		B4CB88941C3E295F00809392 /* PSBPopupInStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPopupInStatusBar.m; path = Classes/PSBPopupInStatusBar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0500244E1C1238BB005E8313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050024641C1238BC005E8313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0500246F1C1238BC005E8313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		050024481C1238BB005E8313 = {
+			isa = PBXGroup;
+			children = (
+				050024531C1238BB005E8313 /* PopupInStatusBar */,
+				0500246A1C1238BC005E8313 /* PopupInStatusBarTests */,
+				050024751C1238BC005E8313 /* PopupInStatusBarUITests */,
+				050024521C1238BB005E8313 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		050024521C1238BB005E8313 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				050024511C1238BB005E8313 /* PopupInStatusBar.app */,
+				050024671C1238BC005E8313 /* PopupInStatusBarTests.xctest */,
+				050024721C1238BC005E8313 /* PopupInStatusBarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		050024531C1238BB005E8313 /* PopupInStatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				0540C3781C123FAF00243CF1 /* Classes */,
+				050024541C1238BB005E8313 /* AppDelegate.h */,
+				050024551C1238BB005E8313 /* AppDelegate.m */,
+				0500245A1C1238BB005E8313 /* ViewController.h */,
+				0500245B1C1238BB005E8313 /* ViewController.m */,
+				0500245D1C1238BB005E8313 /* Assets.xcassets */,
+				0500245F1C1238BB005E8313 /* Main.storyboard */,
+				059E377E1C29C11500ABC042 /* Panel.xib */,
+				050024621C1238BC005E8313 /* Info.plist */,
+				050024571C1238BB005E8313 /* Supporting Files */,
+			);
+			path = PopupInStatusBar;
+			sourceTree = "<group>";
+		};
+		050024571C1238BB005E8313 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				050024581C1238BB005E8313 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0500246A1C1238BC005E8313 /* PopupInStatusBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				0500246B1C1238BC005E8313 /* PopupInStatusBarTests.m */,
+				0500246D1C1238BC005E8313 /* Info.plist */,
+			);
+			path = PopupInStatusBarTests;
+			sourceTree = "<group>";
+		};
+		050024751C1238BC005E8313 /* PopupInStatusBarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				050024761C1238BC005E8313 /* PopupInStatusBarUITests.m */,
+				050024781C1238BC005E8313 /* Info.plist */,
+			);
+			path = PopupInStatusBarUITests;
+			sourceTree = "<group>";
+		};
+		0540C3781C123FAF00243CF1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0540C3791C12400500243CF1 /* PSBBgView.h */,
+				0540C37A1C12400500243CF1 /* PSBBgView.m */,
+				0540C37C1C12440100243CF1 /* PSBPanel.h */,
+				0540C37D1C12440100243CF1 /* PSBPanel.m */,
+				0540C37F1C12487700243CF1 /* PSBStatusItemView.h */,
+				0540C3801C12487700243CF1 /* PSBStatusItemView.m */,
+				059E37751C299D4000ABC042 /* PSBMenuBarCtrl.h */,
+				059E37761C299D4000ABC042 /* PSBMenuBarCtrl.m */,
+				059E37781C29A53100ABC042 /* PSBPanelCtrl.h */,
+				059E37791C29A53100ABC042 /* PSBPanelCtrl.m */,
+				B4CB88931C3E295F00809392 /* PSBPopupInStatusBar.h */,
+				B4CB88941C3E295F00809392 /* PSBPopupInStatusBar.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		050024501C1238BB005E8313 /* PopupInStatusBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0500247B1C1238BC005E8313 /* Build configuration list for PBXNativeTarget "PopupInStatusBar" */;
+			buildPhases = (
+				0500244D1C1238BB005E8313 /* Sources */,
+				0500244E1C1238BB005E8313 /* Frameworks */,
+				0500244F1C1238BB005E8313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopupInStatusBar;
+			productName = PopupInStatusBar;
+			productReference = 050024511C1238BB005E8313 /* PopupInStatusBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		050024661C1238BC005E8313 /* PopupInStatusBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0500247E1C1238BC005E8313 /* Build configuration list for PBXNativeTarget "PopupInStatusBarTests" */;
+			buildPhases = (
+				050024631C1238BC005E8313 /* Sources */,
+				050024641C1238BC005E8313 /* Frameworks */,
+				050024651C1238BC005E8313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				050024691C1238BC005E8313 /* PBXTargetDependency */,
+			);
+			name = PopupInStatusBarTests;
+			productName = PopupInStatusBarTests;
+			productReference = 050024671C1238BC005E8313 /* PopupInStatusBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		050024711C1238BC005E8313 /* PopupInStatusBarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050024811C1238BC005E8313 /* Build configuration list for PBXNativeTarget "PopupInStatusBarUITests" */;
+			buildPhases = (
+				0500246E1C1238BC005E8313 /* Sources */,
+				0500246F1C1238BC005E8313 /* Frameworks */,
+				050024701C1238BC005E8313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				050024741C1238BC005E8313 /* PBXTargetDependency */,
+			);
+			name = PopupInStatusBarUITests;
+			productName = PopupInStatusBarUITests;
+			productReference = 050024721C1238BC005E8313 /* PopupInStatusBarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		050024491C1238BB005E8313 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Gussenov;
+				TargetAttributes = {
+					050024501C1238BB005E8313 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					050024661C1238BC005E8313 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 050024501C1238BB005E8313;
+					};
+					050024711C1238BC005E8313 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 050024501C1238BB005E8313;
+					};
+				};
+			};
+			buildConfigurationList = 0500244C1C1238BB005E8313 /* Build configuration list for PBXProject "PopupInStatusBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 050024481C1238BB005E8313;
+			productRefGroup = 050024521C1238BB005E8313 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				050024501C1238BB005E8313 /* PopupInStatusBar */,
+				050024661C1238BC005E8313 /* PopupInStatusBarTests */,
+				050024711C1238BC005E8313 /* PopupInStatusBarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0500244F1C1238BB005E8313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059E37801C29C11500ABC042 /* Panel.xib in Resources */,
+				0500245E1C1238BB005E8313 /* Assets.xcassets in Resources */,
+				050024611C1238BB005E8313 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050024651C1238BC005E8313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050024701C1238BC005E8313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0500244D1C1238BB005E8313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4CB88951C3E295F00809392 /* PSBPopupInStatusBar.m in Sources */,
+				0540C37E1C12440100243CF1 /* PSBPanel.m in Sources */,
+				0500245C1C1238BB005E8313 /* ViewController.m in Sources */,
+				050024591C1238BB005E8313 /* main.m in Sources */,
+				059E377A1C29A53100ABC042 /* PSBPanelCtrl.m in Sources */,
+				0540C3811C12487700243CF1 /* PSBStatusItemView.m in Sources */,
+				059E37771C299D4000ABC042 /* PSBMenuBarCtrl.m in Sources */,
+				0540C37B1C12400500243CF1 /* PSBBgView.m in Sources */,
+				050024561C1238BB005E8313 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		050024631C1238BC005E8313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0500246C1C1238BC005E8313 /* PopupInStatusBarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0500246E1C1238BC005E8313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050024771C1238BC005E8313 /* PopupInStatusBarUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		050024691C1238BC005E8313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050024501C1238BB005E8313 /* PopupInStatusBar */;
+			targetProxy = 050024681C1238BC005E8313 /* PBXContainerItemProxy */;
+		};
+		050024741C1238BC005E8313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 050024501C1238BB005E8313 /* PopupInStatusBar */;
+			targetProxy = 050024731C1238BC005E8313 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0500245F1C1238BB005E8313 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050024601C1238BB005E8313 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		059E377E1C29C11500ABC042 /* Panel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				059E377F1C29C11500ABC042 /* Base */,
+			);
+			name = Panel.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		050024791C1238BC005E8313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0500247A1C1238BC005E8313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0500247C1C1238BC005E8313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupInStatusBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupInStatusBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0500247D1C1238BC005E8313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupInStatusBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupInStatusBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0500247F1C1238BC005E8313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupInStatusBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupInStatusBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopupInStatusBar.app/Contents/MacOS/PopupInStatusBar";
+			};
+			name = Debug;
+		};
+		050024801C1238BC005E8313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupInStatusBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupInStatusBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopupInStatusBar.app/Contents/MacOS/PopupInStatusBar";
+			};
+			name = Release;
+		};
+		050024821C1238BC005E8313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupInStatusBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupInStatusBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PopupInStatusBar;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		050024831C1238BC005E8313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupInStatusBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupInStatusBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PopupInStatusBar;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0500244C1C1238BB005E8313 /* Build configuration list for PBXProject "PopupInStatusBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050024791C1238BC005E8313 /* Debug */,
+				0500247A1C1238BC005E8313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0500247B1C1238BC005E8313 /* Build configuration list for PBXNativeTarget "PopupInStatusBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0500247C1C1238BC005E8313 /* Debug */,
+				0500247D1C1238BC005E8313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0500247E1C1238BC005E8313 /* Build configuration list for PBXNativeTarget "PopupInStatusBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0500247F1C1238BC005E8313 /* Debug */,
+				050024801C1238BC005E8313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050024811C1238BC005E8313 /* Build configuration list for PBXNativeTarget "PopupInStatusBarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050024821C1238BC005E8313 /* Debug */,
+				050024831C1238BC005E8313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 050024491C1238BB005E8313 /* Project object */;
+}
