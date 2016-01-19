@@ -7,21 +7,59 @@
 //
 
 #import "AppDelegate.h"
+#import "PSBPopupInStatusBar.h"
+#import "TDLViewCtrl.h"
+#import "TDLDataSource.h"
+#import "TDLItem.h"
+#import "Utils.h"
+
 
 @interface AppDelegate ()
+
+@property (strong) PSBPopupInStatusBar *popupInStatusBar;
+@property (strong) TDLViewCtrl *viewCtrl;
+@property (strong) TDLDataSource *dataSource;
 
 - (IBAction)saveAction:(id)sender;
 
 @end
 
+
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    self.viewCtrl = [[TDLViewCtrl alloc] init];
+    PSBPanel *thePanel  = [[PSBPanel alloc] initWithContentRect:NSMakeRect(162, 101, 234, 312)
+        styleMask:128 backing:NSBackingStoreBuffered defer:NO];
+    PSBBgView *theBgView = thePanel.contentView;
+    theBgView.fillOpacity = 0;
+    theBgView.strokeOpacity = 0;
+    [Utils fillView:thePanel.contentView withAutoresizingSubview:self.viewCtrl.view];
+
+    self.popupInStatusBar = [[PSBPopupInStatusBar alloc] initWithWindow:thePanel];
+    
+    self.dataSource = [[TDLDataSource alloc] init];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"buy a mac" completed:NO]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"pick up the kids" completed:YES]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"buy an ipad" completed:NO]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"save psd" completed:NO]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"email david" completed:YES]];
+    
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"feed the cat" completed:NO]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"get some food" completed:YES]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"return books to the library" completed:NO]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"take out the trash" completed:NO]];
+    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"call the bank" completed:YES]];
+
+    [self.viewCtrl setDataSource:self.dataSource];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+    
+    self.popupInStatusBar = nil;
 }
 
 #pragma mark - Core Data stack
