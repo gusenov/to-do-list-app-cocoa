@@ -685,6 +685,16 @@
                             <action selector="showToDoListWin:" target="Voe-Tx-rLC" id="py5-jW-saf"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLQ-W3-ZLA">
+                        <rect key="frame" x="14" y="273" width="204" height="32"/>
+                        <buttonCell key="cell" type="push" title="Show Content View Frame" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DG7-AK-TKB">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showContentViewFrame:" target="Voe-Tx-rLC" id="kTU-pJ-xBU"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>

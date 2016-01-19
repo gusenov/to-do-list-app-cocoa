@@ -54,4 +54,10 @@
     [winCtrl setDataSource:dataSource];
 }
 
+- (IBAction)showContentViewFrame:(id)sender {
+    NSRect theFrame = winCtrl.window.contentView.frame;
+    NSLog(@"x = %f; y = %f; w = %f; h = %f"
+        , theFrame.origin.x, theFrame.origin.y, theFrame.size.width, theFrame.size.height);
+}
+
 @end
