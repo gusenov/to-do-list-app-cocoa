@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PSBPopupInStatusBar.h"
+#import "PSBSearchTxtWin.h"
 
 
 @interface AppDelegate ()
@@ -22,7 +23,12 @@
 #pragma mark - NSApplicationDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.popupInStatusBar = [PSBPopupInStatusBar new];
+    PSBSearchTxtWin *thePanel  = [[PSBSearchTxtWin alloc] initWithContentRect:NSMakeRect(162, 101, 280, 180)
+                                                                    styleMask:128
+                                                                      backing:NSBackingStoreBuffered
+                                                                        defer:NO];
+
+    self.popupInStatusBar = [[PSBPopupInStatusBar alloc] initWithWindow:thePanel];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

@@ -20,6 +20,8 @@
 		059E37771C299D4000ABC042 /* PSBMenuBarCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E37761C299D4000ABC042 /* PSBMenuBarCtrl.m */; };
 		059E377A1C29A53100ABC042 /* PSBPanelCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E37791C29A53100ABC042 /* PSBPanelCtrl.m */; };
 		059E37801C29C11500ABC042 /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059E377E1C29C11500ABC042 /* Panel.xib */; };
+		B40AA4E21C4C3346009C6DF4 /* PSBSearchTxtWin.m in Sources */ = {isa = PBXBuildFile; fileRef = B40AA4E11C4C3346009C6DF4 /* PSBSearchTxtWin.m */; };
+		B40AA4E51C4C336E009C6DF4 /* PSBSearchTxtView.m in Sources */ = {isa = PBXBuildFile; fileRef = B40AA4E41C4C336E009C6DF4 /* PSBSearchTxtView.m */; };
 		B4CB88951C3E295F00809392 /* PSBPopupInStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB88941C3E295F00809392 /* PSBPopupInStatusBar.m */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		059E37781C29A53100ABC042 /* PSBPanelCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPanelCtrl.h; path = Classes/PSBPanelCtrl.h; sourceTree = "<group>"; };
 		059E37791C29A53100ABC042 /* PSBPanelCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPanelCtrl.m; path = Classes/PSBPanelCtrl.m; sourceTree = "<group>"; };
 		059E377F1C29C11500ABC042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Panel.xib; sourceTree = "<group>"; };
+		B40AA4E01C4C3346009C6DF4 /* PSBSearchTxtWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBSearchTxtWin.h; path = Classes/PSBSearchTxtWin.h; sourceTree = "<group>"; };
+		B40AA4E11C4C3346009C6DF4 /* PSBSearchTxtWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBSearchTxtWin.m; path = Classes/PSBSearchTxtWin.m; sourceTree = "<group>"; };
+		B40AA4E31C4C336E009C6DF4 /* PSBSearchTxtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBSearchTxtView.h; path = Classes/PSBSearchTxtView.h; sourceTree = "<group>"; };
+		B40AA4E41C4C336E009C6DF4 /* PSBSearchTxtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBSearchTxtView.m; path = Classes/PSBSearchTxtView.m; sourceTree = "<group>"; };
 		B4CB88931C3E295F00809392 /* PSBPopupInStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPopupInStatusBar.h; path = Classes/PSBPopupInStatusBar.h; sourceTree = "<group>"; };
 		B4CB88941C3E295F00809392 /* PSBPopupInStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPopupInStatusBar.m; path = Classes/PSBPopupInStatusBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +180,10 @@
 				059E37791C29A53100ABC042 /* PSBPanelCtrl.m */,
 				B4CB88931C3E295F00809392 /* PSBPopupInStatusBar.h */,
 				B4CB88941C3E295F00809392 /* PSBPopupInStatusBar.m */,
+				B40AA4E01C4C3346009C6DF4 /* PSBSearchTxtWin.h */,
+				B40AA4E11C4C3346009C6DF4 /* PSBSearchTxtWin.m */,
+				B40AA4E31C4C336E009C6DF4 /* PSBSearchTxtView.h */,
+				B40AA4E41C4C336E009C6DF4 /* PSBSearchTxtView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -315,6 +325,8 @@
 				059E377A1C29A53100ABC042 /* PSBPanelCtrl.m in Sources */,
 				0540C3811C12487700243CF1 /* PSBStatusItemView.m in Sources */,
 				059E37771C299D4000ABC042 /* PSBMenuBarCtrl.m in Sources */,
+				B40AA4E21C4C3346009C6DF4 /* PSBSearchTxtWin.m in Sources */,
+				B40AA4E51C4C336E009C6DF4 /* PSBSearchTxtView.m in Sources */,
 				0540C37B1C12400500243CF1 /* PSBBgView.m in Sources */,
 				050024561C1238BB005E8313 /* AppDelegate.m in Sources */,
 			);

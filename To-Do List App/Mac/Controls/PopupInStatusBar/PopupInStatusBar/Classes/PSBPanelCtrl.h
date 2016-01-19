@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "PSBBgView.h"
 #import "PSBStatusItemView.h"
+#import "PSBPanel.h"
 
 
 @class PSBPanelCtrl;
@@ -24,22 +25,23 @@
 @end
 
 
-@interface PSBPanelCtrl : NSWindowController {
-    BOOL _hasActivePanel;
-    __unsafe_unretained PSBBgView *_backgroundView;
+@interface PSBPanelCtrl : NSWindowController <NSWindowDelegate> {
     __unsafe_unretained id<PSBPanelCtrlDelegate> _delegate;
-    __unsafe_unretained NSSearchField *_searchField;
-    __unsafe_unretained NSTextField *_textField;
+    BOOL _hasActivePanel;
 }
 
-@property (nonatomic, unsafe_unretained) IBOutlet PSBBgView *backgroundView;
-@property (nonatomic, unsafe_unretained) IBOutlet NSSearchField *searchField;
-@property (nonatomic, unsafe_unretained) IBOutlet NSTextField *textField;
-
-@property (nonatomic) BOOL hasActivePanel;
 @property (nonatomic, unsafe_unretained, readonly) id<PSBPanelCtrlDelegate> delegate;
+@property (nonatomic) BOOL hasActivePanel;
 
-- (id)initWithDelegate:(id<PSBPanelCtrlDelegate>)delegate;
+@property (nonatomic) CGFloat popupHeight;
+@property (nonatomic) CGFloat panelWidth;
+@property (nonatomic) NSTimeInterval openDuration;
+@property (nonatomic) NSTimeInterval closeDuration;
+
+- (id)initWithWindow:(PSBPanel *)aWindow
+            delegate:(id<PSBPanelCtrlDelegate>)aDelegate;
+
+- (NSRect)statusRectForWindow:(NSWindow *)aWindow;
 
 - (void)openPanel;
 - (void)closePanel;

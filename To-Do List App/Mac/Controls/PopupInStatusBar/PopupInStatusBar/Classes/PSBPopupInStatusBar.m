@@ -13,6 +13,7 @@
 @interface PSBPopupInStatusBar ()
 
 @property (nonatomic, strong) PSBMenuBarCtrl *menuBarCtrl;
+@property (nonatomic, strong) PSBPanelCtrl *panelCtrl;
 
 @end
 
@@ -27,29 +28,30 @@ void *kContextActivePanel = &kContextActivePanel;
     self.panelCtrl.hasActivePanel = self.menuBarCtrl.hasActiveIcon;
 }
 
-- (PSBPanelCtrl *)panelCtrl
-{
-    static PSBPanelCtrl *thePanelCtrl;
-    if (thePanelCtrl == nil) {
-        thePanelCtrl = [[PSBPanelCtrl alloc] initWithDelegate:self];
-        [thePanelCtrl addObserver:self forKeyPath:@"hasActivePanel" options:0 context:kContextActivePanel];
-    }
-    return thePanelCtrl;
-}
+#pragma mark - PSBPopupInStatusBar
 
-#pragma mark - NSObject
-
-- (id)init
+- (id)initWithWindow:(PSBPanel *)aWindow
 {
+    NSParameterAssert(aWindow && [aWindow isKindOfClass:[PSBPanel class]]);
+    
     self = [super init];
     if (self) {
         self.menuBarCtrl = [[PSBMenuBarCtrl alloc] initWithImg:[NSImage imageNamed:@"Status"]
                                                         altImg:[NSImage imageNamed:@"StatusHighlighted"]
                                                            act:@selector(togglePanel:)
                                                         target:self];
+        
+        _panelCtrl = [[PSBPanelCtrl alloc] initWithWindow:aWindow
+                                                 delegate:self];
+        [_panelCtrl addObserver:self
+                     forKeyPath:@"hasActivePanel"
+                        options:0
+                        context:kContextActivePanel];
     }
     return self;
 }
+
+#pragma mark - NSObject
 
 - (void)dealloc
 {

@@ -17,7 +17,7 @@
     self.fillOpacity = 0.9;
     self.strokeOpacity = 1.0;
     self.lineThickness = 1;
-    self.cornerRadius = 0.6;
+    self.cornerRadius = 6.0;
     self.strokeColor = [NSColor whiteColor];
     self.fillColor = [NSColor colorWithDeviceWhite:1 alpha:self.fillOpacity];
     self.arrowX = NSMidX(self.bounds);

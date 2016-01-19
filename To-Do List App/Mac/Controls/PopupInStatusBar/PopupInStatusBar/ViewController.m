@@ -48,11 +48,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(windowDidMoveOrResize:)
                                                  name:NSWindowDidMoveNotification
-                                               object:nil];
+                                               object:self.view.window];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(windowDidMoveOrResize:)
                                                  name:NSWindowDidResizeNotification
-                                               object:nil];
+                                               object:self.view.window];
 }
 
 - (void)setRepresentedObject:(id)representedObject

@@ -11,4 +11,6 @@
 
 @interface PSBPopupInStatusBar : NSObject <PSBPanelCtrlDelegate>
 
+- (id)initWithWindow:(PSBPanel *)aWindow;
+
 @end
