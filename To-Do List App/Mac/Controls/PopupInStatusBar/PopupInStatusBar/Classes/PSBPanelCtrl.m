@@ -126,13 +126,13 @@
     
     NSRect theScreenRect = [[[NSScreen screens] objectAtIndex:0] frame];
     NSRect theStatusRect = [self statusRectForWindow:thePanel];
-    
+
     NSRect thePanelRect = [thePanel frame];
     thePanelRect.size.width = self.panelWidth;
     thePanelRect.size.height = self.popupHeight;
     thePanelRect.origin.x = roundf(NSMidX(theStatusRect) - NSWidth(thePanelRect) / 2);
     thePanelRect.origin.y = NSMaxY(theStatusRect) - NSHeight(thePanelRect);
-    
+
     PSBBgView *theBgView = thePanel.contentView;
     if (NSMaxX(thePanelRect) > (NSMaxX(theScreenRect) - theBgView.arrowHeight))
         thePanelRect.origin.x -= NSMaxX(thePanelRect) - (NSMaxX(theScreenRect) - theBgView.arrowHeight);
