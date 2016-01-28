@@ -21,6 +21,7 @@
 		057EDD0C1C2B069B001EEEC0 /* TDLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD0B1C2B069B001EEEC0 /* TDLScrollView.m */; };
 		057EDD0F1C2B13F8001EEEC0 /* TDLTblRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD0E1C2B13F8001EEEC0 /* TDLTblRowView.m */; };
 		057EDD121C2B1F74001EEEC0 /* TDLWinCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD111C2B1F74001EEEC0 /* TDLWinCtrl.m */; };
+		B4EB22B41C5AB2D700554FD6 /* TDLTaskTxtField.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EB22B31C5AB2D700554FD6 /* TDLTaskTxtField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		057EDD0E1C2B13F8001EEEC0 /* TDLTblRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTblRowView.m; path = Classes/TDLTblRowView.m; sourceTree = "<group>"; };
 		057EDD101C2B1F74001EEEC0 /* TDLWinCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLWinCtrl.h; path = Classes/TDLWinCtrl.h; sourceTree = "<group>"; };
 		057EDD111C2B1F74001EEEC0 /* TDLWinCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLWinCtrl.m; path = Classes/TDLWinCtrl.m; sourceTree = "<group>"; };
+		B4EB22B21C5AB2D700554FD6 /* TDLTaskTxtField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLTaskTxtField.h; path = Classes/TDLTaskTxtField.h; sourceTree = "<group>"; };
+		B4EB22B31C5AB2D700554FD6 /* TDLTaskTxtField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTaskTxtField.m; path = Classes/TDLTaskTxtField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				052846EE1C2C84DE00273903 /* TDLOutlineViewDelegate.m */,
 				052846F01C2C869D00273903 /* TDLTblCellView.h */,
 				052846F11C2C869D00273903 /* TDLTblCellView.m */,
+				B4EB22B21C5AB2D700554FD6 /* TDLTaskTxtField.h */,
+				B4EB22B31C5AB2D700554FD6 /* TDLTaskTxtField.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				057EDD121C2B1F74001EEEC0 /* TDLWinCtrl.m in Sources */,
 				057EDCE21C2A9E0B001EEEC0 /* AppDelegate.m in Sources */,
 				052846EF1C2C84DE00273903 /* TDLOutlineViewDelegate.m in Sources */,
+				B4EB22B41C5AB2D700554FD6 /* TDLTaskTxtField.m in Sources */,
 				052846EC1C2C7A2C00273903 /* TDLDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

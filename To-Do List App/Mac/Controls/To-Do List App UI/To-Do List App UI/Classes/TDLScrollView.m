@@ -10,8 +10,23 @@
 
 @implementation TDLScrollView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
+- (void)scrollToTop
+{
+    NSPoint theNewScrollOrigin;
+    if ([[self documentView] isFlipped]) {
+        theNewScrollOrigin = NSMakePoint(0.0, 0.0);
+    } else {
+        theNewScrollOrigin = NSMakePoint(0.0
+            , NSMaxY([[self documentView] frame]) - NSHeight([[self contentView] bounds]));
+    }
+    [[self documentView] scrollPoint:theNewScrollOrigin];
+}
+
+#pragma mark - NSView
+
+- (void)drawRect:(NSRect)aDirtyRect
+{
+    [super drawRect:aDirtyRect];
     
     // Drawing code here.
 }

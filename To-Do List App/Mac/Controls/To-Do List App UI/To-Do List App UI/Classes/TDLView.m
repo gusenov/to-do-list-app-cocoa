@@ -11,6 +11,8 @@
 #import "TDLScrollView.h"
 #import "TDLDataSource.h"
 #import "TDLOutlineViewDelegate.h"
+#import "TDLTaskTxtField.h"
+#import "TDLItem.h"
 
 
 @interface TDLView ()
@@ -25,10 +27,13 @@
 @property TDLScrollView *scrollView;
 @property TDLOutlineView *outlineView;
 @property NSImageView *txtFieldImgView;
-@property (strong) NSTextField *taskTxtField;
+@property (strong) TDLTaskTxtField *taskTxtField;
 @property NSImageView *bottomImgView;
 
 @property TDLOutlineViewDelegate *outlineViewDelegate;
+
+@property (strong) NSButton *exitBtn;
+
 
 @end
 
@@ -83,7 +88,7 @@
         [self addSubview:_txtFieldImgView];
         
         
-        _taskTxtField = [NSTextField new];
+        _taskTxtField = [TDLTaskTxtField new];
         [_taskTxtField setAlignment:NSTextAlignmentLeft];
         [_taskTxtField setBezeled:NO];
         [_taskTxtField setDrawsBackground:NO];
@@ -95,7 +100,9 @@
         [_taskTxtField setContentCompressionResistancePriority:NSLayoutPriorityDefaultLow forOrientation:NSLayoutConstraintOrientationHorizontal];
         [_taskTxtField setFont:[NSFont fontWithName:@"Helvetica Neue Light Italic" size:11]];
         [_taskTxtField setTextColor:[NSColor colorWithDeviceCyan:0.96 magenta:0.88 yellow:0.47 black:0.58 alpha:1.0]];
-        [_taskTxtField setStringValue:@"Type your task..."];
+        [_taskTxtField setDefaultValue];
+        [_taskTxtField setTarget:self];
+        [_taskTxtField setAction:@selector(enterKeyPress:)];
         [self.viewsForCstr setObject:_taskTxtField forKey:@"taskTxtField"];
         [self addSubview:_taskTxtField];
 
@@ -107,8 +114,47 @@
         [self addSubview:_bottomImgView];
         
         
+        _exitBtn = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 23, 24)];
+        _exitBtn.target = self;
+        _exitBtn.action = @selector(exitClick:);
+        _exitBtn.translatesAutoresizingMaskIntoConstraints = NO;
+        _exitBtn.autoresizingMask = NSViewMinXMargin;
+        _exitBtn.bezelStyle = NSInlineBezelStyle;
+        _exitBtn.bordered = NO;
+        _exitBtn.title = @"";
+        [_exitBtn setImagePosition:NSImageOnly];
+        [_exitBtn setButtonType:NSMomentaryChangeButton];
+        [_exitBtn.cell setImageScaling:NSImageScaleProportionallyDown];
+        [_exitBtn setImage:[NSImage imageNamed:@"to-do_list_log-out"]];
+        [self.viewsForCstr setObject:_exitBtn forKey:@"exitBtn"];
+        [self addSubview:_exitBtn];
+
+        
         _isConstructed = YES;
     }
+}
+
+- (IBAction)exitClick:(id)aSender
+{
+    [NSApp performSelector:@selector(terminate:)
+                withObject:nil
+                afterDelay:0];
+}
+
+- (IBAction)enterKeyPress:(id)aSender
+{
+    TDLItem *theItem = [[TDLItem alloc] initWithTitle:self.taskTxtField.stringValue
+                                            completed:NO];
+    [self.dataSource addItem:theItem];
+    [self.taskTxtField setDefaultValue];
+    
+    [self.scrollView scrollToTop];
+
+    [self.outlineView beginUpdates];
+    [self.outlineView insertItemsAtIndexes:[NSIndexSet indexSetWithIndex:0]
+                                  inParent:nil
+                             withAnimation:NSTableViewAnimationEffectFade];
+    [self.outlineView endUpdates];
 }
 
 #pragma mark - TDLView
@@ -116,6 +162,11 @@
 - (void)setDataSource:(TDLDataSource *)aDataSource
 {
     [self.outlineView setDataSource:aDataSource];
+}
+
+- (TDLDataSource *)dataSource
+{
+    return (TDLDataSource *)self.outlineView.dataSource;
 }
 
 #pragma mark - NSObject
@@ -171,6 +222,16 @@
         constraintsWithVisualFormat:@"H:|-0-[topImgView(234)]-0-|"
         options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
     
+    // exitBtn
+    
+    [self.customCstr addObjectsFromArray:[NSLayoutConstraint
+        constraintsWithVisualFormat:@"V:|-18-[exitBtn]"
+        options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
+
+    [self.customCstr addObjectsFromArray:[NSLayoutConstraint
+        constraintsWithVisualFormat:@"H:[exitBtn]-10-|"
+        options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
+
     // scrollView
     
     [self.customCstr addObjectsFromArray:[NSLayoutConstraint

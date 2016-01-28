@@ -10,4 +10,6 @@
 
 @interface TDLScrollView : NSScrollView
 
+- (void)scrollToTop;
+
 @end
