@@ -24,7 +24,7 @@
 - (void)addItem:(TDLItem *)anItem
 {
     NSParameterAssert(anItem);
-    [self.items addObject:anItem];
+    [self.items insertObject:anItem atIndex:0];
 }
 
 #pragma mark - NSObject

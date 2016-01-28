@@ -15,5 +15,6 @@
 @interface TDLView : NSView
 
 - (void)setDataSource:(TDLDataSource *)aDataSource;
+- (TDLDataSource *)dataSource;
 
 @end

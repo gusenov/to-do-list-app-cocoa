@@ -13,6 +13,7 @@
 		051747FD1C1235400091E2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051747FC1C1235400091E2E8 /* Assets.xcassets */; };
 		0517480B1C1235400091E2E8 /* To_Do_List_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0517480A1C1235400091E2E8 /* To_Do_List_AppTests.m */; };
 		051748161C1235410091E2E8 /* To_Do_List_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 051748151C1235410091E2E8 /* To_Do_List_AppUITests.m */; };
+		B4165AA41C5ABC8300026E40 /* TDLTaskTxtField.m in Sources */ = {isa = PBXBuildFile; fileRef = B4165AA31C5ABC8300026E40 /* TDLTaskTxtField.m */; };
 		B48867D41C4ED757006D8E67 /* PSBBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867C51C4ED757006D8E67 /* PSBBgView.m */; };
 		B48867D51C4ED757006D8E67 /* PSBMenuBarCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867C71C4ED757006D8E67 /* PSBMenuBarCtrl.m */; };
 		B48867D61C4ED757006D8E67 /* PSBPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867C91C4ED757006D8E67 /* PSBPanel.m */; };
@@ -66,6 +67,8 @@
 		051748111C1235410091E2E8 /* To-Do List AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-Do List AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		051748151C1235410091E2E8 /* To_Do_List_AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = To_Do_List_AppUITests.m; sourceTree = "<group>"; };
 		051748171C1235410091E2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4165AA21C5ABC8300026E40 /* TDLTaskTxtField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLTaskTxtField.h; path = Lib/ToDoListAppUI/TDLTaskTxtField.h; sourceTree = "<group>"; };
+		B4165AA31C5ABC8300026E40 /* TDLTaskTxtField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTaskTxtField.m; path = Lib/ToDoListAppUI/TDLTaskTxtField.m; sourceTree = "<group>"; };
 		B48867C41C4ED757006D8E67 /* PSBBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBBgView.h; path = Lib/PopupInStatusBar/PSBBgView.h; sourceTree = "<group>"; };
 		B48867C51C4ED757006D8E67 /* PSBBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBBgView.m; path = Lib/PopupInStatusBar/PSBBgView.m; sourceTree = "<group>"; };
 		B48867C61C4ED757006D8E67 /* PSBMenuBarCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBMenuBarCtrl.h; path = Lib/PopupInStatusBar/PSBMenuBarCtrl.h; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				B498F3151C4EAC9900C57344 /* TDLViewCtrl.m */,
 				B498F3161C4EAC9900C57344 /* TDLWinCtrl.h */,
 				B498F3171C4EAC9900C57344 /* TDLWinCtrl.m */,
+				B4165AA21C5ABC8300026E40 /* TDLTaskTxtField.h */,
+				B4165AA31C5ABC8300026E40 /* TDLTaskTxtField.m */,
 			);
 			name = ToDoListAppUI;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				B498F31C1C4EAC9900C57344 /* TDLScrollView.m in Sources */,
 				B498F3201C4EAC9900C57344 /* TDLViewCtrl.m in Sources */,
 				B498F31D1C4EAC9900C57344 /* TDLTblCellView.m in Sources */,
+				B4165AA41C5ABC8300026E40 /* TDLTaskTxtField.m in Sources */,
 				B48867DA1C4ED757006D8E67 /* PSBSearchTxtWin.m in Sources */,
 				B48867D91C4ED757006D8E67 /* PSBSearchTxtView.m in Sources */,
 				B498F31F1C4EAC9900C57344 /* TDLView.m in Sources */,
