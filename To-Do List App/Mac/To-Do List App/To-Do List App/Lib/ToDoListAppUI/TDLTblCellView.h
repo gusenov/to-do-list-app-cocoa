@@ -7,9 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "TDLItem.h"
 
 @interface TDLTblCellView : NSTableCellView
 
 @property (nonatomic, setter = setCompleted:) BOOL isCompleted;
+
+- (id)initWithItem:(TDLItem *)anItem;
 
 @end
