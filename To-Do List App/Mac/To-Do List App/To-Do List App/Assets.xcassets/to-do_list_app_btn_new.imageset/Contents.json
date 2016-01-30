@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Log-Out-icon-24.png",
+      "filename" : "to-do_list_app_btn_new.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Log-Out-icon-48.png",
       "scale" : "2x"
     },
     {

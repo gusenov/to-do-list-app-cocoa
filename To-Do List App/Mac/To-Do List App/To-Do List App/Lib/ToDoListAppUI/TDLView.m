@@ -11,8 +11,9 @@
 #import "TDLScrollView.h"
 #import "TDLDataSource.h"
 #import "TDLOutlineViewDelegate.h"
-#import "TDLTaskTxtField.h"
 #import "TDLItem.h"
+#import "TDLBtnNew.h"
+#import "TDLTblCellView.h"
 
 
 @interface TDLView ()
@@ -27,13 +28,15 @@
 @property TDLScrollView *scrollView;
 @property TDLOutlineView *outlineView;
 @property NSImageView *txtFieldImgView;
-@property (strong) TDLTaskTxtField *taskTxtField;
+@property (strong) NSSearchField *taskTxtField;
 @property NSImageView *bottomImgView;
 
 @property TDLOutlineViewDelegate *outlineViewDelegate;
 
-@property (strong) NSButton *exitBtn;
+@property (strong) TDLBtnNew *btnNew;
+@property (strong) TDLBtnNew *exitBtn;
 
+@property (strong) NSTextField *appTitle;
 
 @end
 
@@ -53,6 +56,23 @@
         [_topImgView setImage:[NSImage imageNamed:@"to-do_list_app_top"]];
         [self.viewsForCstr setObject:_topImgView forKey:@"topImgView"];
         [self addSubview:_topImgView];
+        
+        
+        _appTitle = [NSTextField new];
+        [_appTitle setAlignment:NSTextAlignmentCenter];
+        [_appTitle setBezeled:NO];
+        [_appTitle setBackgroundColor:[NSColor clearColor]];
+        [_appTitle setDrawsBackground:NO];
+        [_appTitle setEditable:NO];
+        [_appTitle setSelectable:NO];
+        [_appTitle setBordered:NO];
+        [_appTitle setFocusRingType:NSFocusRingTypeNone];
+        [_appTitle setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [_appTitle setFont:[NSFont fontWithName:@"Arial Bold" size:16]];
+        _appTitle.stringValue = @"";
+        _appTitle.textColor = [NSColor whiteColor];
+        [self.viewsForCstr setObject:_appTitle forKey:@"appTitle"];
+        [self addSubview:_appTitle];
         
         
         _outlineView = [TDLOutlineView new];
@@ -90,21 +110,26 @@
         [self addSubview:_txtFieldImgView];
         
         
-        _taskTxtField = [TDLTaskTxtField new];
-        [_taskTxtField setAlignment:NSTextAlignmentLeft];
-        [_taskTxtField setBezeled:NO];
-        [_taskTxtField setDrawsBackground:NO];
+        _taskTxtField = [NSSearchField new];
+//        [_taskTxtField setAlignment:NSTextAlignmentLeft];
+//        [_taskTxtField setBezeled:NO];
+//        [_taskTxtField setDrawsBackground:NO];
+        [_taskTxtField setBezelStyle:NSTextFieldSquareBezel];
         [_taskTxtField setFocusRingType:NSFocusRingTypeNone];
+//        [_taskTxtField setBordered:NO];
 //        [_taskTxtField setEditable:NO];
 //        [_taskTxtField setSelectable:NO];
         [_taskTxtField setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_taskTxtField.cell setLineBreakMode:NSLineBreakByTruncatingTail];
-        [_taskTxtField setContentCompressionResistancePriority:NSLayoutPriorityDefaultLow forOrientation:NSLayoutConstraintOrientationHorizontal];
+        [_taskTxtField setContentCompressionResistancePriority:NSLayoutPriorityDefaultLow
+                                                forOrientation:NSLayoutConstraintOrientationHorizontal];
         [_taskTxtField setFont:[NSFont fontWithName:@"Helvetica Neue Light Italic" size:11]];
         [_taskTxtField setTextColor:[NSColor colorWithDeviceCyan:0.96 magenta:0.88 yellow:0.47 black:0.58 alpha:1.0]];
-        [_taskTxtField setDefaultValue];
-        [_taskTxtField setTarget:self];
-        [_taskTxtField setAction:@selector(enterKeyPress:)];
+        [_taskTxtField setPlaceholderString:@"Search your task..."];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(runSearch:)
+                                                     name:NSControlTextDidChangeNotification
+                                                   object:_taskTxtField];
         [self.viewsForCstr setObject:_taskTxtField forKey:@"taskTxtField"];
         [self addSubview:_taskTxtField];
 
@@ -116,22 +141,21 @@
         [self addSubview:_bottomImgView];
         
         
-        _exitBtn = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 23, 24)];
+        _exitBtn = [[TDLBtnNew alloc] initWithFrame:NSMakeRect(0, 0, 41, 30)];
         _exitBtn.target = self;
         _exitBtn.action = @selector(exitClick:);
-        _exitBtn.translatesAutoresizingMaskIntoConstraints = NO;
-        _exitBtn.autoresizingMask = NSViewMinXMargin;
-        _exitBtn.bezelStyle = NSInlineBezelStyle;
-        _exitBtn.bordered = NO;
-        _exitBtn.title = @"";
-        _exitBtn.toolTip = @"Quit To-Do List App";
-        [_exitBtn setImagePosition:NSImageOnly];
-        [_exitBtn setButtonType:NSMomentaryChangeButton];
-        [_exitBtn.cell setImageScaling:NSImageScaleProportionallyDown];
-        [_exitBtn setImage:[NSImage imageNamed:@"to-do_list_log-out"]];
+        [_exitBtn setTitle:@"Quit"];
         [self.viewsForCstr setObject:_exitBtn forKey:@"exitBtn"];
         [self addSubview:_exitBtn];
 
+        
+        _btnNew = [[TDLBtnNew alloc] initWithFrame:NSMakeRect(0, 0, 41, 30)];
+        _btnNew.target = self;
+        _btnNew.action = @selector(addNewItem:);
+        [_btnNew setTitle:@"New"];
+        [self.viewsForCstr setObject:_btnNew forKey:@"newBtn"];
+        [self addSubview:_btnNew];
+        
         
         _isConstructed = YES;
     }
@@ -144,20 +168,28 @@
                 afterDelay:0];
 }
 
-- (IBAction)enterKeyPress:(id)aSender
+- (void)runSearch:(NSNotification *)aNotification
 {
-    TDLItem *theItem = [[TDLItem alloc] initWithTitle:self.taskTxtField.stringValue
-                                            completed:NO];
+    NSText *theFieldEditor = [[aNotification userInfo] objectForKey:@"NSFieldEditor"];
+    NSString *theSearchString = theFieldEditor.string;
+    NSLog(@"Search for ‘%@’…", theSearchString);
+}
+
+- (IBAction)addNewItem:(id)aSender
+{
+    TDLItem *theItem = [[TDLItem alloc] initWithTitle:@"" completed:NO];
     [self.dataSource addItem:theItem];
-    [self.taskTxtField setDefaultValue];
     
     [self.scrollView scrollToTop];
-
+    
     [self.outlineView beginUpdates];
     [self.outlineView insertItemsAtIndexes:[NSIndexSet indexSetWithIndex:0]
                                   inParent:nil
                              withAnimation:NSTableViewAnimationEffectFade];
     [self.outlineView endUpdates];
+    
+    TDLTblCellView *theCell = [self.outlineView viewAtColumn:0 row:0 makeIfNecessary:NO];
+    [theCell.textField.window makeFirstResponder:theCell.textField];
 }
 
 #pragma mark - TDLView
@@ -190,6 +222,13 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSControlTextDidChangeNotification
+                                                  object:_taskTxtField];
+}
+
 #pragma mark - NSView
 
 - (id)initWithFrame:(NSRect)aFrameRect
@@ -215,6 +254,16 @@
     [self removeConstraints:self.customCstr];
     [self.customCstr removeAllObjects];
     
+    // appTitle
+    
+    [self.customCstr addObjectsFromArray:[NSLayoutConstraint
+        constraintsWithVisualFormat:@"V:|-26-[appTitle]"
+        options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
+    
+    [self.customCstr addObjectsFromArray:[NSLayoutConstraint
+        constraintsWithVisualFormat:@"H:|-0-[appTitle]-0-|"
+        options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
+
     // bgImgView
     
     [self.customCstr addObjectsFromArray:[NSLayoutConstraint
@@ -225,6 +274,16 @@
         constraintsWithVisualFormat:@"H:|-0-[topImgView(234)]-0-|"
         options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
     
+    // newBtn
+    
+    [self.customCstr addObjectsFromArray:[NSLayoutConstraint
+        constraintsWithVisualFormat:@"V:|-18-[newBtn]"
+        options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
+    
+    [self.customCstr addObjectsFromArray:[NSLayoutConstraint
+        constraintsWithVisualFormat:@"H:|-10-[newBtn]"
+        options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
+
     // exitBtn
     
     [self.customCstr addObjectsFromArray:[NSLayoutConstraint
@@ -258,11 +317,11 @@
     // taskTxtField
     
     [self.customCstr addObjectsFromArray:[NSLayoutConstraint
-        constraintsWithVisualFormat:@"V:[taskTxtField]-14-[bottomImgView]"
+        constraintsWithVisualFormat:@"V:[taskTxtField(30)]-6-[bottomImgView]"
         options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
     
     [self.customCstr addObjectsFromArray:[NSLayoutConstraint
-        constraintsWithVisualFormat:@"H:|-74-[taskTxtField]-17-|"
+        constraintsWithVisualFormat:@"H:|-65-[taskTxtField]-11-|"
         options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
 
     // bottomImgView
