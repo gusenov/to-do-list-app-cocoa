@@ -21,6 +21,8 @@
 @property (strong) NSButton *boxImgView;
 @property (strong) NSImageView *strikeImgView;
 
+@property (strong) TDLItem *item;
+
 @end
 
 
@@ -57,14 +59,21 @@
         [self setTextField:_titleTxtField];
         [self.textField setAlignment:NSTextAlignmentCenter];
         [self.textField setBezeled:NO];
-        [self.textField setDrawsBackground:NO];
-        [self.textField setEditable:NO];
-        [self.textField setSelectable:NO];
+        [self.textField setBackgroundColor:[NSColor clearColor]];
+//        [self.textField setDrawsBackground:NO];
+//        [self.textField setEditable:NO];
+//        [self.textField setSelectable:NO];
+        [self.textField setBordered:NO];
+        [self.textField setFocusRingType:NSFocusRingTypeNone];
         [self.textField setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.textField.cell setLineBreakMode:NSLineBreakByTruncatingTail];
         [self.textField setContentCompressionResistancePriority:NSLayoutPriorityDefaultLow
             forOrientation:NSLayoutConstraintOrientationHorizontal];
         [self.textField setFont:[NSFont fontWithName:@"Helvetica Neue Bold" size:10]];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(controlTextDidChange:)
+                                                     name:NSControlTextDidChangeNotification
+                                                   object:self.textField];
         [self.viewsForCstr setObject:self.textField forKey:@"titleTxtField"];
         [self addSubview:self.textField];
         
@@ -77,7 +86,25 @@
     [self setCompleted:!self.isCompleted];
 }
 
+- (void)controlTextDidChange:(NSNotification *)aNotification
+{
+    NSText *theFieldEditor = [[aNotification userInfo] objectForKey:@"NSFieldEditor"];
+    self.item.title = theFieldEditor.string;
+}
+
 #pragma mark - TDLTblCellView
+
+- (id)initWithItem:(TDLItem *)anItem
+{
+    self = [self init];
+    if (self) {
+        _item = anItem;
+        
+        [self.textField setStringValue:[_item.title uppercaseString]];
+        [self setCompleted:_item.isCompleted];
+    }
+    return self;
+}
 
 - (void)setCompleted:(BOOL)aCompleted
 {
@@ -88,11 +115,19 @@
             [self addSubview:_strikeImgView];
             [self updateConstraints];
         }
-        [self.textField setTextColor:[NSColor colorWithDeviceCyan:0.88 magenta:0.62 yellow:0.49 black:0.35 alpha:0.3]];
+        [self.textField setTextColor:[NSColor colorWithDeviceCyan:0.88
+                                                          magenta:0.62
+                                                           yellow:0.49
+                                                            black:0.35
+                                                            alpha:0.3]];
     } else {
         [_boxImgView setImage:[NSImage imageNamed:@"to-do_list_app_box_uncheked"]];
         [_strikeImgView removeFromSuperview];
-        [self.textField setTextColor:[NSColor colorWithDeviceCyan:0.88 magenta:0.62 yellow:0.49 black:0.35 alpha:1]];
+        [self.textField setTextColor:[NSColor colorWithDeviceCyan:0.88
+                                                          magenta:0.62
+                                                           yellow:0.49
+                                                            black:0.35
+                                                            alpha:1]];
     }
 }
 
@@ -150,6 +185,15 @@
         options:0 metrics:self.metricsForCstr views:self.viewsForCstr]];
 
     [self addConstraints:self.customCstr];
+}
+
+#pragma mark - NSObject 
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSControlTextDidChangeNotification
+                                                  object:self.textField];
 }
 
 @end

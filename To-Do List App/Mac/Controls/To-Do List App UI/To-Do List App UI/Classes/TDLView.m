@@ -62,6 +62,7 @@
         [_outlineView setGridStyleMask:NSTableViewGridNone];
         [_outlineView setIntercellSpacing:NSMakeSize(0, 0)];
         [_outlineView setBackgroundColor:[NSColor clearColor]];
+        [_outlineView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleNone];
 
         NSRect theOutlineViewHeaderFrame = _outlineView.headerView.frame;
         theOutlineViewHeaderFrame.size.height = 0;
@@ -70,6 +71,7 @@
         
         NSTableColumn *theColumn = [NSTableColumn new];
         [_outlineView addTableColumn:theColumn];
+
         
         _scrollView = [TDLScrollView new];
         [_scrollView setDocumentView:_outlineView];
@@ -122,6 +124,7 @@
         _exitBtn.bezelStyle = NSInlineBezelStyle;
         _exitBtn.bordered = NO;
         _exitBtn.title = @"";
+        _exitBtn.toolTip = @"Quit To-Do List App";
         [_exitBtn setImagePosition:NSImageOnly];
         [_exitBtn setButtonType:NSMomentaryChangeButton];
         [_exitBtn.cell setImageScaling:NSImageScaleProportionallyDown];

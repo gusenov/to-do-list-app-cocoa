@@ -23,15 +23,16 @@
     return theRowView;
 }
 
-- (NSView *)outlineView:(NSOutlineView *)anOutlineView viewForTableColumn:(NSTableColumn *)aTblColumn item:(TDLItem *)anItem
+- (NSView *)outlineView:(NSOutlineView *)anOutlineView
+     viewForTableColumn:(NSTableColumn *)aTblColumn
+                   item:(TDLItem *)anItem
 {
-    TDLTblCellView *theTblCellView = [TDLTblCellView new];
-    [theTblCellView.textField setStringValue:[anItem.title uppercaseString]];
-    [theTblCellView setCompleted:anItem.isCompleted];
+    TDLTblCellView *theTblCellView = [[TDLTblCellView alloc] initWithItem:anItem];
     return theTblCellView;
 }
 
-- (CGFloat)outlineView:(NSOutlineView *)anOutlineView heightOfRowByItem:(TDLItem *)anItem
+- (CGFloat)outlineView:(NSOutlineView *)anOutlineView
+     heightOfRowByItem:(TDLItem *)anItem
 {
     CGFloat theHeight = 38;
     if ([anOutlineView rowForItem:anItem] == anOutlineView.numberOfRows - 1) {
@@ -41,9 +42,10 @@
     }
 }
 
-- (BOOL)outlineView:(NSOutlineView *)anOutlineView shouldSelectItem:(TDLItem *)anItem
+- (BOOL)outlineView:(NSOutlineView *)anOutlineView
+   shouldSelectItem:(TDLItem *)anItem
 {
-    return NO;
+    return YES;
 }
 
 @end
