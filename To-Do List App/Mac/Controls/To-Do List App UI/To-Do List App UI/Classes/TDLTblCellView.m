@@ -89,7 +89,9 @@
 - (void)controlTextDidChange:(NSNotification *)aNotification
 {
     NSText *theFieldEditor = [[aNotification userInfo] objectForKey:@"NSFieldEditor"];
-    self.item.title = theFieldEditor.string;
+    NSInteger theCaretPos = [theFieldEditor selectedRange].location;
+    theFieldEditor.string = self.item.title = [theFieldEditor.string uppercaseString];
+    [theFieldEditor setSelectedRange:NSMakeRange(theCaretPos, 0)];
 }
 
 #pragma mark - TDLTblCellView
@@ -120,6 +122,8 @@
                                                            yellow:0.49
                                                             black:0.35
                                                             alpha:0.3]];
+        [self.textField.window makeFirstResponder:nil];
+        [self.textField setEditable:NO];
     } else {
         [_boxImgView setImage:[NSImage imageNamed:@"to-do_list_app_box_uncheked"]];
         [_strikeImgView removeFromSuperview];
@@ -128,6 +132,8 @@
                                                            yellow:0.49
                                                             black:0.35
                                                             alpha:1]];
+        [self.textField setEditable:YES];
+        [self.textField.window makeFirstResponder:self.textField];
     }
 }
 

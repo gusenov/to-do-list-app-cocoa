@@ -22,6 +22,13 @@
     [[self documentView] scrollPoint:theNewScrollOrigin];
 }
 
+#pragma mark - NSScrollView
+
+- (void)scrollWheel:(NSEvent *)anEvent
+{
+    [super scrollWheel:anEvent];
+}
+
 #pragma mark - NSView
 
 - (void)drawRect:(NSRect)aDirtyRect

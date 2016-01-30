@@ -51,6 +51,11 @@
     [dataSource addItem:[[TDLItem alloc] initWithTitle:@"buy an ipad" completed:NO]];
     [dataSource addItem:[[TDLItem alloc] initWithTitle:@"save psd" completed:NO]];
     [dataSource addItem:[[TDLItem alloc] initWithTitle:@"email david" completed:YES]];
+    
+    [dataSource addItem:[[TDLItem alloc] initWithTitle:@"make coffee" completed:NO]];
+    [dataSource addItem:[[TDLItem alloc] initWithTitle:@"drink coffee" completed:NO]];
+    [dataSource addItem:[[TDLItem alloc] initWithTitle:@"be awesome" completed:NO]];
+
     [winCtrl setDataSource:dataSource];
 }
 
