@@ -13,27 +13,10 @@
 		051747FD1C1235400091E2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051747FC1C1235400091E2E8 /* Assets.xcassets */; };
 		0517480B1C1235400091E2E8 /* To_Do_List_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0517480A1C1235400091E2E8 /* To_Do_List_AppTests.m */; };
 		051748161C1235410091E2E8 /* To_Do_List_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 051748151C1235410091E2E8 /* To_Do_List_AppUITests.m */; };
-		B483BEB91C5D420F00B2A9D4 /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B483BEB81C5D420F00B2A9D4 /* TDLBtnNew.m */; };
-		B48867D41C4ED757006D8E67 /* PSBBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867C51C4ED757006D8E67 /* PSBBgView.m */; };
-		B48867D51C4ED757006D8E67 /* PSBMenuBarCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867C71C4ED757006D8E67 /* PSBMenuBarCtrl.m */; };
-		B48867D61C4ED757006D8E67 /* PSBPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867C91C4ED757006D8E67 /* PSBPanel.m */; };
-		B48867D71C4ED757006D8E67 /* PSBPanelCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867CB1C4ED757006D8E67 /* PSBPanelCtrl.m */; };
-		B48867D81C4ED757006D8E67 /* PSBPopupInStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867CD1C4ED757006D8E67 /* PSBPopupInStatusBar.m */; };
-		B48867D91C4ED757006D8E67 /* PSBSearchTxtView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867CF1C4ED757006D8E67 /* PSBSearchTxtView.m */; };
-		B48867DA1C4ED757006D8E67 /* PSBSearchTxtWin.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867D11C4ED757006D8E67 /* PSBSearchTxtWin.m */; };
-		B48867DB1C4ED757006D8E67 /* PSBStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48867D31C4ED757006D8E67 /* PSBStatusItemView.m */; };
-		B498F3181C4EAC9900C57344 /* TDLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3051C4EAC9900C57344 /* TDLDataSource.m */; };
-		B498F3191C4EAC9900C57344 /* TDLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3071C4EAC9900C57344 /* TDLItem.m */; };
-		B498F31A1C4EAC9900C57344 /* TDLOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3091C4EAC9900C57344 /* TDLOutlineView.m */; };
-		B498F31B1C4EAC9900C57344 /* TDLOutlineViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F30B1C4EAC9900C57344 /* TDLOutlineViewDelegate.m */; };
-		B498F31C1C4EAC9900C57344 /* TDLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F30D1C4EAC9900C57344 /* TDLScrollView.m */; };
-		B498F31D1C4EAC9900C57344 /* TDLTblCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F30F1C4EAC9900C57344 /* TDLTblCellView.m */; };
-		B498F31E1C4EAC9900C57344 /* TDLTblRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3111C4EAC9900C57344 /* TDLTblRowView.m */; };
-		B498F31F1C4EAC9900C57344 /* TDLView.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3131C4EAC9900C57344 /* TDLView.m */; };
-		B498F3201C4EAC9900C57344 /* TDLViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3151C4EAC9900C57344 /* TDLViewCtrl.m */; };
-		B498F3211C4EAC9900C57344 /* TDLWinCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3171C4EAC9900C57344 /* TDLWinCtrl.m */; };
+		B4032AAD1C5E870100AA82EF /* PopupToDoGUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4032AAA1C5E86F800AA82EF /* PopupToDoGUI.framework */; };
 		B498F3251C4EBFCB00C57344 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3241C4EBFCB00C57344 /* Utils.m */; };
 		B498F32E1C4EC75B00C57344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B498F32C1C4EC75B00C57344 /* Main.storyboard */; };
+		B4CF503C1C5E83D7000D728C /* PopupStatusBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CF50391C5E837D000D728C /* PopupStatusBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +34,76 @@
 			remoteGlobalIDString = 051747EC1C1235400091E2E8;
 			remoteInfo = "To-Do List App";
 		};
+		B4032AA71C5E86F800AA82EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 057EDCDD1C2A9E0B001EEEC0;
+			remoteInfo = "To-Do List App UI";
+		};
+		B4032AA91C5E86F800AA82EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B4032A6E1C5E85E000AA82EF;
+			remoteInfo = PopupToDoGUI;
+		};
+		B4032AAB1C5E86F800AA82EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B4032A771C5E85E000AA82EF;
+			remoteInfo = PopupToDoGUITests;
+		};
+		B4032AAE1C5E871000AA82EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B4032A6D1C5E85E000AA82EF;
+			remoteInfo = PopupToDoGUI;
+		};
+		B4CF50321C5E837D000D728C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 050024511C1238BB005E8313;
+			remoteInfo = PopupInStatusBar;
+		};
+		B4CF50341C5E837D000D728C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 050024671C1238BC005E8313;
+			remoteInfo = PopupInStatusBarTests;
+		};
+		B4CF50361C5E837D000D728C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 050024721C1238BC005E8313;
+			remoteInfo = PopupInStatusBarUITests;
+		};
+		B4CF50381C5E837D000D728C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B41035751C5E82B7003D9225;
+			remoteInfo = PopupStatusBar;
+		};
+		B4CF503A1C5E837D000D728C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B410357E1C5E82B7003D9225;
+			remoteInfo = PopupStatusBarTests;
+		};
+		B4CF503D1C5E843D000D728C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B41035741C5E82B7003D9225;
+			remoteInfo = PopupStatusBar;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -67,47 +120,11 @@
 		051748111C1235410091E2E8 /* To-Do List AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-Do List AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		051748151C1235410091E2E8 /* To_Do_List_AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = To_Do_List_AppUITests.m; sourceTree = "<group>"; };
 		051748171C1235410091E2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B483BEB71C5D420F00B2A9D4 /* TDLBtnNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLBtnNew.h; path = Lib/ToDoListAppUI/TDLBtnNew.h; sourceTree = "<group>"; };
-		B483BEB81C5D420F00B2A9D4 /* TDLBtnNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLBtnNew.m; path = Lib/ToDoListAppUI/TDLBtnNew.m; sourceTree = "<group>"; };
-		B48867C41C4ED757006D8E67 /* PSBBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBBgView.h; path = Lib/PopupInStatusBar/PSBBgView.h; sourceTree = "<group>"; };
-		B48867C51C4ED757006D8E67 /* PSBBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBBgView.m; path = Lib/PopupInStatusBar/PSBBgView.m; sourceTree = "<group>"; };
-		B48867C61C4ED757006D8E67 /* PSBMenuBarCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBMenuBarCtrl.h; path = Lib/PopupInStatusBar/PSBMenuBarCtrl.h; sourceTree = "<group>"; };
-		B48867C71C4ED757006D8E67 /* PSBMenuBarCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBMenuBarCtrl.m; path = Lib/PopupInStatusBar/PSBMenuBarCtrl.m; sourceTree = "<group>"; };
-		B48867C81C4ED757006D8E67 /* PSBPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPanel.h; path = Lib/PopupInStatusBar/PSBPanel.h; sourceTree = "<group>"; };
-		B48867C91C4ED757006D8E67 /* PSBPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPanel.m; path = Lib/PopupInStatusBar/PSBPanel.m; sourceTree = "<group>"; };
-		B48867CA1C4ED757006D8E67 /* PSBPanelCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPanelCtrl.h; path = Lib/PopupInStatusBar/PSBPanelCtrl.h; sourceTree = "<group>"; };
-		B48867CB1C4ED757006D8E67 /* PSBPanelCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPanelCtrl.m; path = Lib/PopupInStatusBar/PSBPanelCtrl.m; sourceTree = "<group>"; };
-		B48867CC1C4ED757006D8E67 /* PSBPopupInStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBPopupInStatusBar.h; path = Lib/PopupInStatusBar/PSBPopupInStatusBar.h; sourceTree = "<group>"; };
-		B48867CD1C4ED757006D8E67 /* PSBPopupInStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBPopupInStatusBar.m; path = Lib/PopupInStatusBar/PSBPopupInStatusBar.m; sourceTree = "<group>"; };
-		B48867CE1C4ED757006D8E67 /* PSBSearchTxtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBSearchTxtView.h; path = Lib/PopupInStatusBar/PSBSearchTxtView.h; sourceTree = "<group>"; };
-		B48867CF1C4ED757006D8E67 /* PSBSearchTxtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBSearchTxtView.m; path = Lib/PopupInStatusBar/PSBSearchTxtView.m; sourceTree = "<group>"; };
-		B48867D01C4ED757006D8E67 /* PSBSearchTxtWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBSearchTxtWin.h; path = Lib/PopupInStatusBar/PSBSearchTxtWin.h; sourceTree = "<group>"; };
-		B48867D11C4ED757006D8E67 /* PSBSearchTxtWin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBSearchTxtWin.m; path = Lib/PopupInStatusBar/PSBSearchTxtWin.m; sourceTree = "<group>"; };
-		B48867D21C4ED757006D8E67 /* PSBStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSBStatusItemView.h; path = Lib/PopupInStatusBar/PSBStatusItemView.h; sourceTree = "<group>"; };
-		B48867D31C4ED757006D8E67 /* PSBStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSBStatusItemView.m; path = Lib/PopupInStatusBar/PSBStatusItemView.m; sourceTree = "<group>"; };
-		B498F3041C4EAC9900C57344 /* TDLDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLDataSource.h; path = Lib/ToDoListAppUI/TDLDataSource.h; sourceTree = "<group>"; };
-		B498F3051C4EAC9900C57344 /* TDLDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLDataSource.m; path = Lib/ToDoListAppUI/TDLDataSource.m; sourceTree = "<group>"; };
-		B498F3061C4EAC9900C57344 /* TDLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLItem.h; path = Lib/ToDoListAppUI/TDLItem.h; sourceTree = "<group>"; };
-		B498F3071C4EAC9900C57344 /* TDLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLItem.m; path = Lib/ToDoListAppUI/TDLItem.m; sourceTree = "<group>"; };
-		B498F3081C4EAC9900C57344 /* TDLOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLOutlineView.h; path = Lib/ToDoListAppUI/TDLOutlineView.h; sourceTree = "<group>"; };
-		B498F3091C4EAC9900C57344 /* TDLOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLOutlineView.m; path = Lib/ToDoListAppUI/TDLOutlineView.m; sourceTree = "<group>"; };
-		B498F30A1C4EAC9900C57344 /* TDLOutlineViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLOutlineViewDelegate.h; path = Lib/ToDoListAppUI/TDLOutlineViewDelegate.h; sourceTree = "<group>"; };
-		B498F30B1C4EAC9900C57344 /* TDLOutlineViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLOutlineViewDelegate.m; path = Lib/ToDoListAppUI/TDLOutlineViewDelegate.m; sourceTree = "<group>"; };
-		B498F30C1C4EAC9900C57344 /* TDLScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLScrollView.h; path = Lib/ToDoListAppUI/TDLScrollView.h; sourceTree = "<group>"; };
-		B498F30D1C4EAC9900C57344 /* TDLScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLScrollView.m; path = Lib/ToDoListAppUI/TDLScrollView.m; sourceTree = "<group>"; };
-		B498F30E1C4EAC9900C57344 /* TDLTblCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLTblCellView.h; path = Lib/ToDoListAppUI/TDLTblCellView.h; sourceTree = "<group>"; };
-		B498F30F1C4EAC9900C57344 /* TDLTblCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTblCellView.m; path = Lib/ToDoListAppUI/TDLTblCellView.m; sourceTree = "<group>"; };
-		B498F3101C4EAC9900C57344 /* TDLTblRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLTblRowView.h; path = Lib/ToDoListAppUI/TDLTblRowView.h; sourceTree = "<group>"; };
-		B498F3111C4EAC9900C57344 /* TDLTblRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTblRowView.m; path = Lib/ToDoListAppUI/TDLTblRowView.m; sourceTree = "<group>"; };
-		B498F3121C4EAC9900C57344 /* TDLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLView.h; path = Lib/ToDoListAppUI/TDLView.h; sourceTree = "<group>"; };
-		B498F3131C4EAC9900C57344 /* TDLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLView.m; path = Lib/ToDoListAppUI/TDLView.m; sourceTree = "<group>"; };
-		B498F3141C4EAC9900C57344 /* TDLViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLViewCtrl.h; path = Lib/ToDoListAppUI/TDLViewCtrl.h; sourceTree = "<group>"; };
-		B498F3151C4EAC9900C57344 /* TDLViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLViewCtrl.m; path = Lib/ToDoListAppUI/TDLViewCtrl.m; sourceTree = "<group>"; };
-		B498F3161C4EAC9900C57344 /* TDLWinCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLWinCtrl.h; path = Lib/ToDoListAppUI/TDLWinCtrl.h; sourceTree = "<group>"; };
-		B498F3171C4EAC9900C57344 /* TDLWinCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLWinCtrl.m; path = Lib/ToDoListAppUI/TDLWinCtrl.m; sourceTree = "<group>"; };
+		B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "To-Do List App UI.xcodeproj"; path = "Subprojects/To-Do List App UI/To-Do List App UI.xcodeproj"; sourceTree = "<group>"; };
 		B498F3231C4EBFCB00C57344 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Classes/Utils.h; sourceTree = "<group>"; };
 		B498F3241C4EBFCB00C57344 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = Classes/Utils.m; sourceTree = "<group>"; };
 		B498F32D1C4EC75B00C57344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PopupInStatusBar.xcodeproj; path = Subprojects/PopupInStatusBar/PopupInStatusBar.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4032AAD1C5E870100AA82EF /* PopupToDoGUI.framework in Frameworks */,
+				B4CF503C1C5E83D7000D728C /* PopupStatusBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +157,7 @@
 		051747E41C1235400091E2E8 = {
 			isa = PBXGroup;
 			children = (
+				B4C296441C5E80670039DA41 /* Subprojects */,
 				051747EF1C1235400091E2E8 /* To-Do List App */,
 				051748091C1235400091E2E8 /* To-Do List AppTests */,
 				051748141C1235410091E2E8 /* To-Do List AppUITests */,
@@ -158,7 +178,6 @@
 		051747EF1C1235400091E2E8 /* To-Do List App */ = {
 			isa = PBXGroup;
 			children = (
-				B498F2E91C4EAC6400C57344 /* Lib */,
 				B498F3221C4EAF9B00C57344 /* Classes */,
 				051747F01C1235400091E2E8 /* AppDelegate.h */,
 				051747F11C1235400091E2E8 /* AppDelegate.m */,
@@ -197,65 +216,14 @@
 			path = "To-Do List AppUITests";
 			sourceTree = "<group>";
 		};
-		B498F2E91C4EAC6400C57344 /* Lib */ = {
+		B4032A9E1C5E86F800AA82EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B498F2EA1C4EAC6A00C57344 /* PopupInStatusBar */,
-				B498F2EB1C4EAC7200C57344 /* ToDoListAppUI */,
+				B4032AA81C5E86F800AA82EF /* To-Do List App UI.app */,
+				B4032AAA1C5E86F800AA82EF /* PopupToDoGUI.framework */,
+				B4032AAC1C5E86F800AA82EF /* PopupToDoGUITests.xctest */,
 			);
-			name = Lib;
-			sourceTree = "<group>";
-		};
-		B498F2EA1C4EAC6A00C57344 /* PopupInStatusBar */ = {
-			isa = PBXGroup;
-			children = (
-				B48867C41C4ED757006D8E67 /* PSBBgView.h */,
-				B48867C51C4ED757006D8E67 /* PSBBgView.m */,
-				B48867C61C4ED757006D8E67 /* PSBMenuBarCtrl.h */,
-				B48867C71C4ED757006D8E67 /* PSBMenuBarCtrl.m */,
-				B48867C81C4ED757006D8E67 /* PSBPanel.h */,
-				B48867C91C4ED757006D8E67 /* PSBPanel.m */,
-				B48867CA1C4ED757006D8E67 /* PSBPanelCtrl.h */,
-				B48867CB1C4ED757006D8E67 /* PSBPanelCtrl.m */,
-				B48867CC1C4ED757006D8E67 /* PSBPopupInStatusBar.h */,
-				B48867CD1C4ED757006D8E67 /* PSBPopupInStatusBar.m */,
-				B48867CE1C4ED757006D8E67 /* PSBSearchTxtView.h */,
-				B48867CF1C4ED757006D8E67 /* PSBSearchTxtView.m */,
-				B48867D01C4ED757006D8E67 /* PSBSearchTxtWin.h */,
-				B48867D11C4ED757006D8E67 /* PSBSearchTxtWin.m */,
-				B48867D21C4ED757006D8E67 /* PSBStatusItemView.h */,
-				B48867D31C4ED757006D8E67 /* PSBStatusItemView.m */,
-			);
-			name = PopupInStatusBar;
-			sourceTree = "<group>";
-		};
-		B498F2EB1C4EAC7200C57344 /* ToDoListAppUI */ = {
-			isa = PBXGroup;
-			children = (
-				B483BEB71C5D420F00B2A9D4 /* TDLBtnNew.h */,
-				B483BEB81C5D420F00B2A9D4 /* TDLBtnNew.m */,
-				B498F3041C4EAC9900C57344 /* TDLDataSource.h */,
-				B498F3051C4EAC9900C57344 /* TDLDataSource.m */,
-				B498F3061C4EAC9900C57344 /* TDLItem.h */,
-				B498F3071C4EAC9900C57344 /* TDLItem.m */,
-				B498F3081C4EAC9900C57344 /* TDLOutlineView.h */,
-				B498F3091C4EAC9900C57344 /* TDLOutlineView.m */,
-				B498F30A1C4EAC9900C57344 /* TDLOutlineViewDelegate.h */,
-				B498F30B1C4EAC9900C57344 /* TDLOutlineViewDelegate.m */,
-				B498F30C1C4EAC9900C57344 /* TDLScrollView.h */,
-				B498F30D1C4EAC9900C57344 /* TDLScrollView.m */,
-				B498F30E1C4EAC9900C57344 /* TDLTblCellView.h */,
-				B498F30F1C4EAC9900C57344 /* TDLTblCellView.m */,
-				B498F3101C4EAC9900C57344 /* TDLTblRowView.h */,
-				B498F3111C4EAC9900C57344 /* TDLTblRowView.m */,
-				B498F3121C4EAC9900C57344 /* TDLView.h */,
-				B498F3131C4EAC9900C57344 /* TDLView.m */,
-				B498F3141C4EAC9900C57344 /* TDLViewCtrl.h */,
-				B498F3151C4EAC9900C57344 /* TDLViewCtrl.m */,
-				B498F3161C4EAC9900C57344 /* TDLWinCtrl.h */,
-				B498F3171C4EAC9900C57344 /* TDLWinCtrl.m */,
-			);
-			name = ToDoListAppUI;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B498F3221C4EAF9B00C57344 /* Classes */ = {
@@ -265,6 +233,27 @@
 				B498F3241C4EBFCB00C57344 /* Utils.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		B4C296441C5E80670039DA41 /* Subprojects */ = {
+			isa = PBXGroup;
+			children = (
+				B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */,
+				B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */,
+			);
+			name = Subprojects;
+			sourceTree = "<group>";
+		};
+		B4CF502B1C5E837D000D728C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4CF50331C5E837D000D728C /* PopupInStatusBar.app */,
+				B4CF50351C5E837D000D728C /* PopupInStatusBarTests.xctest */,
+				B4CF50371C5E837D000D728C /* PopupInStatusBarUITests.xctest */,
+				B4CF50391C5E837D000D728C /* PopupStatusBar.framework */,
+				B4CF503B1C5E837D000D728C /* PopupStatusBarTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +270,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				B4032AAF1C5E871000AA82EF /* PBXTargetDependency */,
+				B4CF503E1C5E843D000D728C /* PBXTargetDependency */,
 			);
 			name = "To-Do List App";
 			productName = "To-Do List App";
@@ -356,6 +347,16 @@
 			mainGroup = 051747E41C1235400091E2E8;
 			productRefGroup = 051747EE1C1235400091E2E8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B4CF502B1C5E837D000D728C /* Products */;
+					ProjectRef = B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */;
+				},
+				{
+					ProductGroup = B4032A9E1C5E86F800AA82EF /* Products */;
+					ProjectRef = B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				051747EC1C1235400091E2E8 /* To-Do List App */,
@@ -364,6 +365,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B4032AA81C5E86F800AA82EF /* To-Do List App UI.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "To-Do List App UI.app";
+			remoteRef = B4032AA71C5E86F800AA82EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4032AAA1C5E86F800AA82EF /* PopupToDoGUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PopupToDoGUI.framework;
+			remoteRef = B4032AA91C5E86F800AA82EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4032AAC1C5E86F800AA82EF /* PopupToDoGUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PopupToDoGUITests.xctest;
+			remoteRef = B4032AAB1C5E86F800AA82EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4CF50331C5E837D000D728C /* PopupInStatusBar.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PopupInStatusBar.app;
+			remoteRef = B4CF50321C5E837D000D728C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4CF50351C5E837D000D728C /* PopupInStatusBarTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PopupInStatusBarTests.xctest;
+			remoteRef = B4CF50341C5E837D000D728C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4CF50371C5E837D000D728C /* PopupInStatusBarUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PopupInStatusBarUITests.xctest;
+			remoteRef = B4CF50361C5E837D000D728C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4CF50391C5E837D000D728C /* PopupStatusBar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PopupStatusBar.framework;
+			remoteRef = B4CF50381C5E837D000D728C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B4CF503B1C5E837D000D728C /* PopupStatusBarTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PopupStatusBarTests.xctest;
+			remoteRef = B4CF503A1C5E837D000D728C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		051747EB1C1235400091E2E8 /* Resources */ = {
@@ -396,29 +456,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B498F31C1C4EAC9900C57344 /* TDLScrollView.m in Sources */,
-				B498F3201C4EAC9900C57344 /* TDLViewCtrl.m in Sources */,
-				B498F31D1C4EAC9900C57344 /* TDLTblCellView.m in Sources */,
-				B48867DA1C4ED757006D8E67 /* PSBSearchTxtWin.m in Sources */,
-				B48867D91C4ED757006D8E67 /* PSBSearchTxtView.m in Sources */,
-				B498F31F1C4EAC9900C57344 /* TDLView.m in Sources */,
-				B498F3211C4EAC9900C57344 /* TDLWinCtrl.m in Sources */,
-				B498F3181C4EAC9900C57344 /* TDLDataSource.m in Sources */,
-				B498F3191C4EAC9900C57344 /* TDLItem.m in Sources */,
-				B48867D71C4ED757006D8E67 /* PSBPanelCtrl.m in Sources */,
-				B498F31A1C4EAC9900C57344 /* TDLOutlineView.m in Sources */,
 				051747F51C1235400091E2E8 /* main.m in Sources */,
-				B498F31B1C4EAC9900C57344 /* TDLOutlineViewDelegate.m in Sources */,
 				051747F21C1235400091E2E8 /* AppDelegate.m in Sources */,
 				051747FB1C1235400091E2E8 /* To_Do_List_App.xcdatamodeld in Sources */,
-				B483BEB91C5D420F00B2A9D4 /* TDLBtnNew.m in Sources */,
-				B48867D41C4ED757006D8E67 /* PSBBgView.m in Sources */,
 				B498F3251C4EBFCB00C57344 /* Utils.m in Sources */,
-				B48867D61C4ED757006D8E67 /* PSBPanel.m in Sources */,
-				B498F31E1C4EAC9900C57344 /* TDLTblRowView.m in Sources */,
-				B48867DB1C4ED757006D8E67 /* PSBStatusItemView.m in Sources */,
-				B48867D81C4ED757006D8E67 /* PSBPopupInStatusBar.m in Sources */,
-				B48867D51C4ED757006D8E67 /* PSBMenuBarCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +491,16 @@
 			isa = PBXTargetDependency;
 			target = 051747EC1C1235400091E2E8 /* To-Do List App */;
 			targetProxy = 051748121C1235410091E2E8 /* PBXContainerItemProxy */;
+		};
+		B4032AAF1C5E871000AA82EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PopupToDoGUI;
+			targetProxy = B4032AAE1C5E871000AA82EF /* PBXContainerItemProxy */;
+		};
+		B4CF503E1C5E843D000D728C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PopupStatusBar;
+			targetProxy = B4CF503D1C5E843D000D728C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

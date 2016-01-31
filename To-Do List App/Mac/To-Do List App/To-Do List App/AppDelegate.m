@@ -7,10 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "PSBPopupInStatusBar.h"
-#import "TDLViewCtrl.h"
-#import "TDLDataSource.h"
-#import "TDLItem.h"
+#import <PopupStatusBar/PopupStatusBar.h>
+#import <PopupToDoGUI/PopupToDoGUI.h>
 #import "Utils.h"
 
 

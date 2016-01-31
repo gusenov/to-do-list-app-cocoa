@@ -21,8 +21,43 @@
 		057EDD0C1C2B069B001EEEC0 /* TDLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD0B1C2B069B001EEEC0 /* TDLScrollView.m */; };
 		057EDD0F1C2B13F8001EEEC0 /* TDLTblRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD0E1C2B13F8001EEEC0 /* TDLTblRowView.m */; };
 		057EDD121C2B1F74001EEEC0 /* TDLWinCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD111C2B1F74001EEEC0 /* TDLWinCtrl.m */; };
+		B4032A711C5E85E000AA82EF /* PopupToDoGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = B4032A701C5E85E000AA82EF /* PopupToDoGUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A781C5E85E000AA82EF /* PopupToDoGUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4032A6E1C5E85E000AA82EF /* PopupToDoGUI.framework */; };
+		B4032A7D1C5E85E000AA82EF /* PopupToDoGUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4032A7C1C5E85E000AA82EF /* PopupToDoGUITests.m */; };
+		B4032A861C5E864200AA82EF /* TDLViewCtrl.h in Headers */ = {isa = PBXBuildFile; fileRef = 057EDCFE1C2AB9FE001EEEC0 /* TDLViewCtrl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A881C5E864200AA82EF /* TDLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 057EDD011C2AD086001EEEC0 /* TDLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A8A1C5E864200AA82EF /* TDLOutlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = 057EDD071C2B04E5001EEEC0 /* TDLOutlineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A8C1C5E864300AA82EF /* TDLScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 057EDD0A1C2B069B001EEEC0 /* TDLScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A8E1C5E864300AA82EF /* TDLTblRowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 057EDD0D1C2B13F8001EEEC0 /* TDLTblRowView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A901C5E864300AA82EF /* TDLWinCtrl.h in Headers */ = {isa = PBXBuildFile; fileRef = 057EDD101C2B1F74001EEEC0 /* TDLWinCtrl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A921C5E864300AA82EF /* TDLItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 052846E71C2C79A700273903 /* TDLItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A941C5E864300AA82EF /* TDLDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 052846EA1C2C7A2C00273903 /* TDLDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A961C5E864300AA82EF /* TDLOutlineViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 052846ED1C2C84DE00273903 /* TDLOutlineViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A981C5E864300AA82EF /* TDLTblCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 052846F01C2C869D00273903 /* TDLTblCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032A9A1C5E864300AA82EF /* TDLBtnNew.h in Headers */ = {isa = PBXBuildFile; fileRef = B49394DC1C5CAAB000362692 /* TDLBtnNew.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4032AB81C5E887300AA82EF /* TDLViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDCFF1C2AB9FE001EEEC0 /* TDLViewCtrl.m */; };
+		B4032AB91C5E887300AA82EF /* TDLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD021C2AD086001EEEC0 /* TDLView.m */; };
+		B4032ABA1C5E887300AA82EF /* TDLOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD081C2B04E5001EEEC0 /* TDLOutlineView.m */; };
+		B4032ABB1C5E887300AA82EF /* TDLScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD0B1C2B069B001EEEC0 /* TDLScrollView.m */; };
+		B4032ABC1C5E887300AA82EF /* TDLTblRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD0E1C2B13F8001EEEC0 /* TDLTblRowView.m */; };
+		B4032ABD1C5E887300AA82EF /* TDLWinCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 057EDD111C2B1F74001EEEC0 /* TDLWinCtrl.m */; };
+		B4032ABE1C5E887300AA82EF /* TDLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846E81C2C79A700273903 /* TDLItem.m */; };
+		B4032ABF1C5E887300AA82EF /* TDLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846EB1C2C7A2C00273903 /* TDLDataSource.m */; };
+		B4032AC01C5E887300AA82EF /* TDLOutlineViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846EE1C2C84DE00273903 /* TDLOutlineViewDelegate.m */; };
+		B4032AC11C5E887300AA82EF /* TDLTblCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846F11C2C869D00273903 /* TDLTblCellView.m */; };
+		B4032AC21C5E887300AA82EF /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B49394DD1C5CAAB000362692 /* TDLBtnNew.m */; };
 		B49394DE1C5CAAB000362692 /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B49394DD1C5CAAB000362692 /* TDLBtnNew.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4032A791C5E85E000AA82EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057EDCD51C2A9E0B001EEEC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4032A6D1C5E85E000AA82EF;
+			remoteInfo = PopupToDoGUI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		052846E71C2C79A700273903 /* TDLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLItem.h; path = Classes/TDLItem.h; sourceTree = "<group>"; };
@@ -52,6 +87,12 @@
 		057EDD0E1C2B13F8001EEEC0 /* TDLTblRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTblRowView.m; path = Classes/TDLTblRowView.m; sourceTree = "<group>"; };
 		057EDD101C2B1F74001EEEC0 /* TDLWinCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLWinCtrl.h; path = Classes/TDLWinCtrl.h; sourceTree = "<group>"; };
 		057EDD111C2B1F74001EEEC0 /* TDLWinCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLWinCtrl.m; path = Classes/TDLWinCtrl.m; sourceTree = "<group>"; };
+		B4032A6E1C5E85E000AA82EF /* PopupToDoGUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PopupToDoGUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4032A701C5E85E000AA82EF /* PopupToDoGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopupToDoGUI.h; sourceTree = "<group>"; };
+		B4032A721C5E85E000AA82EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4032A771C5E85E000AA82EF /* PopupToDoGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopupToDoGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4032A7C1C5E85E000AA82EF /* PopupToDoGUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupToDoGUITests.m; sourceTree = "<group>"; };
+		B4032A7E1C5E85E100AA82EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49394DC1C5CAAB000362692 /* TDLBtnNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLBtnNew.h; path = Classes/TDLBtnNew.h; sourceTree = "<group>"; };
 		B49394DD1C5CAAB000362692 /* TDLBtnNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLBtnNew.m; path = Classes/TDLBtnNew.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +105,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4032A6A1C5E85E000AA82EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4032A741C5E85E000AA82EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4032A781C5E85E000AA82EF /* PopupToDoGUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				057EDCDF1C2A9E0B001EEEC0 /* To-Do List App UI */,
+				B4032A851C5E85E500AA82EF /* Framework */,
 				057EDCDE1C2A9E0B001EEEC0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				057EDCDD1C2A9E0B001EEEC0 /* To-Do List App UI.app */,
+				B4032A6E1C5E85E000AA82EF /* PopupToDoGUI.framework */,
+				B4032A771C5E85E000AA82EF /* PopupToDoGUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +193,56 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		B4032A6F1C5E85E000AA82EF /* PopupToDoGUI */ = {
+			isa = PBXGroup;
+			children = (
+				B4032A701C5E85E000AA82EF /* PopupToDoGUI.h */,
+				B4032A721C5E85E000AA82EF /* Info.plist */,
+			);
+			path = PopupToDoGUI;
+			sourceTree = "<group>";
+		};
+		B4032A7B1C5E85E000AA82EF /* PopupToDoGUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4032A7C1C5E85E000AA82EF /* PopupToDoGUITests.m */,
+				B4032A7E1C5E85E100AA82EF /* Info.plist */,
+			);
+			path = PopupToDoGUITests;
+			sourceTree = "<group>";
+		};
+		B4032A851C5E85E500AA82EF /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				B4032A6F1C5E85E000AA82EF /* PopupToDoGUI */,
+				B4032A7B1C5E85E000AA82EF /* PopupToDoGUITests */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B4032A6B1C5E85E000AA82EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4032A711C5E85E000AA82EF /* PopupToDoGUI.h in Headers */,
+				B4032A861C5E864200AA82EF /* TDLViewCtrl.h in Headers */,
+				B4032A881C5E864200AA82EF /* TDLView.h in Headers */,
+				B4032A8A1C5E864200AA82EF /* TDLOutlineView.h in Headers */,
+				B4032A8C1C5E864300AA82EF /* TDLScrollView.h in Headers */,
+				B4032A8E1C5E864300AA82EF /* TDLTblRowView.h in Headers */,
+				B4032A901C5E864300AA82EF /* TDLWinCtrl.h in Headers */,
+				B4032A921C5E864300AA82EF /* TDLItem.h in Headers */,
+				B4032A941C5E864300AA82EF /* TDLDataSource.h in Headers */,
+				B4032A961C5E864300AA82EF /* TDLOutlineViewDelegate.h in Headers */,
+				B4032A981C5E864300AA82EF /* TDLTblCellView.h in Headers */,
+				B4032A9A1C5E864300AA82EF /* TDLBtnNew.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		057EDCDC1C2A9E0B001EEEC0 /* To-Do List App UI */ = {
@@ -154,6 +262,42 @@
 			productReference = 057EDCDD1C2A9E0B001EEEC0 /* To-Do List App UI.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B4032A6D1C5E85E000AA82EF /* PopupToDoGUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4032A831C5E85E100AA82EF /* Build configuration list for PBXNativeTarget "PopupToDoGUI" */;
+			buildPhases = (
+				B4032A691C5E85E000AA82EF /* Sources */,
+				B4032A6A1C5E85E000AA82EF /* Frameworks */,
+				B4032A6B1C5E85E000AA82EF /* Headers */,
+				B4032A6C1C5E85E000AA82EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopupToDoGUI;
+			productName = PopupToDoGUI;
+			productReference = B4032A6E1C5E85E000AA82EF /* PopupToDoGUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4032A761C5E85E000AA82EF /* PopupToDoGUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4032A841C5E85E100AA82EF /* Build configuration list for PBXNativeTarget "PopupToDoGUITests" */;
+			buildPhases = (
+				B4032A731C5E85E000AA82EF /* Sources */,
+				B4032A741C5E85E000AA82EF /* Frameworks */,
+				B4032A751C5E85E000AA82EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4032A7A1C5E85E000AA82EF /* PBXTargetDependency */,
+			);
+			name = PopupToDoGUITests;
+			productName = PopupToDoGUITests;
+			productReference = B4032A771C5E85E000AA82EF /* PopupToDoGUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,6 +310,12 @@
 					057EDCDC1C2A9E0B001EEEC0 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 64TBLB6GT9;
+					};
+					B4032A6D1C5E85E000AA82EF = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					B4032A761C5E85E000AA82EF = {
+						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
@@ -183,6 +333,8 @@
 			projectRoot = "";
 			targets = (
 				057EDCDC1C2A9E0B001EEEC0 /* To-Do List App UI */,
+				B4032A6D1C5E85E000AA82EF /* PopupToDoGUI */,
+				B4032A761C5E85E000AA82EF /* PopupToDoGUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +346,20 @@
 			files = (
 				057EDCE71C2A9E0B001EEEC0 /* Assets.xcassets in Resources */,
 				057EDCEA1C2A9E0B001EEEC0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4032A6C1C5E85E000AA82EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4032A751C5E85E000AA82EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +386,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4032A691C5E85E000AA82EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4032AB81C5E887300AA82EF /* TDLViewCtrl.m in Sources */,
+				B4032AB91C5E887300AA82EF /* TDLView.m in Sources */,
+				B4032ABA1C5E887300AA82EF /* TDLOutlineView.m in Sources */,
+				B4032ABB1C5E887300AA82EF /* TDLScrollView.m in Sources */,
+				B4032ABC1C5E887300AA82EF /* TDLTblRowView.m in Sources */,
+				B4032ABD1C5E887300AA82EF /* TDLWinCtrl.m in Sources */,
+				B4032ABE1C5E887300AA82EF /* TDLItem.m in Sources */,
+				B4032ABF1C5E887300AA82EF /* TDLDataSource.m in Sources */,
+				B4032AC01C5E887300AA82EF /* TDLOutlineViewDelegate.m in Sources */,
+				B4032AC11C5E887300AA82EF /* TDLTblCellView.m in Sources */,
+				B4032AC21C5E887300AA82EF /* TDLBtnNew.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4032A731C5E85E000AA82EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4032A7D1C5E85E000AA82EF /* PopupToDoGUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4032A7A1C5E85E000AA82EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4032A6D1C5E85E000AA82EF /* PopupToDoGUI */;
+			targetProxy = B4032A791C5E85E000AA82EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		057EDCE81C2A9E0B001EEEC0 /* MainMenu.xib */ = {
@@ -343,6 +543,70 @@
 			};
 			name = Release;
 		};
+		B4032A7F1C5E85E100AA82EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PopupToDoGUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupToDoGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B4032A801C5E85E100AA82EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = PopupToDoGUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupToDoGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4032A811C5E85E100AA82EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupToDoGUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupToDoGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B4032A821C5E85E100AA82EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PopupToDoGUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gussenov.PopupToDoGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -360,6 +624,24 @@
 			buildConfigurations = (
 				057EDCEF1C2A9E0B001EEEC0 /* Debug */,
 				057EDCF01C2A9E0B001EEEC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4032A831C5E85E100AA82EF /* Build configuration list for PBXNativeTarget "PopupToDoGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4032A7F1C5E85E100AA82EF /* Debug */,
+				B4032A801C5E85E100AA82EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4032A841C5E85E100AA82EF /* Build configuration list for PBXNativeTarget "PopupToDoGUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4032A811C5E85E100AA82EF /* Debug */,
+				B4032A821C5E85E100AA82EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
