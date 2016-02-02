@@ -7,7 +7,6 @@
 //
 
 #import "TDLDataSource.h"
-#import "TDLItem.h"
 
 
 @interface TDLDataSource ()
@@ -35,6 +34,12 @@
     self = [self init];
     if (self) {
         [_items addObjectsFromArray:anItems];
+        for (TDLItem *theItem in _items) {
+            [theItem addObserver:self
+                      forKeyPath:@"propertiesChanged"
+                         options:NSKeyValueObservingOptionNew
+                         context:nil];
+        }
     }
     return self;
 }
@@ -45,11 +50,17 @@
     NSParameterAssert(anItem);
     [self.items insertObject:anItem atIndex:0];
     if (self.delegate) [self.delegate onItemAdded:anItem];
+    
+    [anItem addObserver:self
+             forKeyPath:@"propertiesChanged"
+                options:NSKeyValueObservingOptionNew
+                context:nil];
 }
 
 - (void)removeItem:(TDLItem *)anItem
 {
     NSParameterAssert(anItem);
+    [anItem removeObserver:self forKeyPath:@"propertiesChanged"];
     [self.items removeObject:anItem];
     if (self.delegate) [self.delegate onItemRemoved:anItem];
 }
@@ -63,6 +74,23 @@
         _items = [NSMutableArray array];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    for (TDLItem *theItem in self.items) {
+        [theItem removeObserver:self forKeyPath:@"propertiesChanged"];
+    }
+}
+
+#pragma mark - NSObject(NSKeyValueObserving)
+
+- (void)observeValueForKeyPath:(NSString *)aKeyPath
+                      ofObject:(id)anObject
+                        change:(NSDictionary *)aChange
+                       context:(void *)aContext
+{
+    if (self.delegate) [self.delegate onItemChanged:anObject];
 }
 
 #pragma mark - NSOutlineViewDataSource

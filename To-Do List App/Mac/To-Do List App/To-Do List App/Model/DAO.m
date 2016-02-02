@@ -57,6 +57,7 @@
 - (NSArray *)tasks
 {
     NSFetchRequest *theRequest = [self taskFetchRequest];
+    [theRequest setSortDescriptors:@[ [[NSSortDescriptor alloc] initWithKey:@"creation" ascending:NO] ]];
     
     NSError *theError = nil;
     NSArray *theResult = [self.MOC executeFetchRequest:theRequest error:&theError];

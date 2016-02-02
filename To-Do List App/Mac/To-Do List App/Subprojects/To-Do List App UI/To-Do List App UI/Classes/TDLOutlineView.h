@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TDLOutlineView : NSOutlineView
+@interface TDLOutlineView : NSOutlineView <NSMenuDelegate>
+
+- (NSInteger)indexOfRowUnderPointer;
 
 @end

@@ -135,6 +135,8 @@
         [self.textField setEditable:YES];
         [self.textField.window makeFirstResponder:self.textField];
     }
+    
+    [self.item setCompleted:_isCompleted];
 }
 
 #pragma mark - NSResponder

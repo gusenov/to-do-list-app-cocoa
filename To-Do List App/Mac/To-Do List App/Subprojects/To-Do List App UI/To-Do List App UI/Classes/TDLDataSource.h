@@ -8,9 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TDLDataSourceDelegate.h"
-
-
-@class TDLItem;
+#import "TDLItem.h"
 
 
 @interface TDLDataSource : NSObject <NSOutlineViewDataSource>

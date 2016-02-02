@@ -18,6 +18,8 @@
 @property (strong, readonly) NSString *userName;
 @property (strong, readonly) NSDate *modificationDate;
 
+@property (nonatomic, strong, readonly) id propertiesChanged;
+
 - (id)initWithTitle:(NSString *)aTitle
           completed:(BOOL)aCompleted;
 
