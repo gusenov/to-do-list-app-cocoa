@@ -27,3 +27,4 @@ FOUNDATION_EXPORT const unsigned char PopupToDoGUIVersionString[];
 #import <PopupToDoGUI/TDLOutlineViewDelegate.h>
 #import <PopupToDoGUI/TDLTblCellView.h>
 #import <PopupToDoGUI/TDLBtnNew.h>
+#import <PopupToDoGUI/TDLDataSourceDelegate.h>

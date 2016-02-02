@@ -14,9 +14,11 @@
 		0517480B1C1235400091E2E8 /* To_Do_List_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0517480A1C1235400091E2E8 /* To_Do_List_AppTests.m */; };
 		051748161C1235410091E2E8 /* To_Do_List_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 051748151C1235410091E2E8 /* To_Do_List_AppUITests.m */; };
 		B4032AAD1C5E870100AA82EF /* PopupToDoGUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4032AAA1C5E86F800AA82EF /* PopupToDoGUI.framework */; };
+		B48B94571C5FE6710006026C /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B94561C5FE6710006026C /* DAO.m */; };
 		B498F3251C4EBFCB00C57344 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B498F3241C4EBFCB00C57344 /* Utils.m */; };
 		B498F32E1C4EC75B00C57344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B498F32C1C4EC75B00C57344 /* Main.storyboard */; };
 		B4CF503C1C5E83D7000D728C /* PopupStatusBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CF50391C5E837D000D728C /* PopupStatusBar.framework */; };
+		B4F860251C60D466002B5D14 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F860241C60D466002B5D14 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,10 +123,15 @@
 		051748151C1235410091E2E8 /* To_Do_List_AppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = To_Do_List_AppUITests.m; sourceTree = "<group>"; };
 		051748171C1235410091E2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4032A9D1C5E86F800AA82EF /* To-Do List App UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "To-Do List App UI.xcodeproj"; path = "Subprojects/To-Do List App UI/To-Do List App UI.xcodeproj"; sourceTree = "<group>"; };
+		B48B94551C5FE6710006026C /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAO.h; path = Model/DAO.h; sourceTree = "<group>"; };
+		B48B94561C5FE6710006026C /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAO.m; path = Model/DAO.m; sourceTree = "<group>"; };
 		B498F3231C4EBFCB00C57344 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Classes/Utils.h; sourceTree = "<group>"; };
 		B498F3241C4EBFCB00C57344 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = Classes/Utils.m; sourceTree = "<group>"; };
 		B498F32D1C4EC75B00C57344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PopupInStatusBar.xcodeproj; path = Subprojects/PopupInStatusBar/PopupInStatusBar.xcodeproj; sourceTree = "<group>"; };
+		B4F860221C60D466002B5D14 /* Task+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Task+CoreDataProperties.h"; path = "Model/Task+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B4F860231C60D466002B5D14 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Model/Task.h; sourceTree = "<group>"; };
+		B4F860241C60D466002B5D14 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Model/Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +190,7 @@
 				051747F11C1235400091E2E8 /* AppDelegate.m */,
 				051747FC1C1235400091E2E8 /* Assets.xcassets */,
 				051748011C1235400091E2E8 /* Info.plist */,
-				051747F91C1235400091E2E8 /* To_Do_List_App.xcdatamodeld */,
+				B4C6B0691C5FDE69006C7E33 /* Model */,
 				B498F32C1C4EC75B00C57344 /* Main.storyboard */,
 				051747F31C1235400091E2E8 /* Supporting Files */,
 			);
@@ -242,6 +249,19 @@
 				B4CF502A1C5E837D000D728C /* PopupInStatusBar.xcodeproj */,
 			);
 			name = Subprojects;
+			sourceTree = "<group>";
+		};
+		B4C6B0691C5FDE69006C7E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				051747F91C1235400091E2E8 /* To_Do_List_App.xcdatamodeld */,
+				B48B94551C5FE6710006026C /* DAO.h */,
+				B48B94561C5FE6710006026C /* DAO.m */,
+				B4F860221C60D466002B5D14 /* Task+CoreDataProperties.h */,
+				B4F860231C60D466002B5D14 /* Task.h */,
+				B4F860241C60D466002B5D14 /* Task.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B4CF502B1C5E837D000D728C /* Products */ = {
@@ -456,9 +476,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48B94571C5FE6710006026C /* DAO.m in Sources */,
 				051747F51C1235400091E2E8 /* main.m in Sources */,
 				051747F21C1235400091E2E8 /* AppDelegate.m in Sources */,
 				051747FB1C1235400091E2E8 /* To_Do_List_App.xcdatamodeld in Sources */,
+				B4F860251C60D466002B5D14 /* Task.m in Sources */,
 				B498F3251C4EBFCB00C57344 /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

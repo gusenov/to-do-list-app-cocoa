@@ -2,8 +2,8 @@
 //  TDLDataSource.m
 //  To-Do List App UI
 //
-//  Created by Abbas on 12/25/15.
-//  Copyright © 2015 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 12/25/15.
+//  Copyright © 2015 Gussenov Lab. All rights reserved.
 //
 
 #import "TDLDataSource.h"
@@ -21,10 +21,37 @@
 
 #pragma mark - TDLDataSource
 
+- (id)initWithDelegate:(id<TDLDataSourceDelegate>)aDelegate
+{
+    self = [self init];
+    if (self) {
+        _delegate = aDelegate;
+    }
+    return self;
+}
+
+- (id)initWithItems:(NSArray *)anItems
+{
+    self = [self init];
+    if (self) {
+        [_items addObjectsFromArray:anItems];
+    }
+    return self;
+}
+
+
 - (void)addItem:(TDLItem *)anItem
 {
     NSParameterAssert(anItem);
     [self.items insertObject:anItem atIndex:0];
+    if (self.delegate) [self.delegate onItemAdded:anItem];
+}
+
+- (void)removeItem:(TDLItem *)anItem
+{
+    NSParameterAssert(anItem);
+    [self.items removeObject:anItem];
+    if (self.delegate) [self.delegate onItemRemoved:anItem];
 }
 
 #pragma mark - NSObject

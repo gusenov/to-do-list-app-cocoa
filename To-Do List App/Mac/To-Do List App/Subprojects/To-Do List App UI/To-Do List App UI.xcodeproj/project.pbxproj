@@ -47,6 +47,7 @@
 		B4032AC11C5E887300AA82EF /* TDLTblCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846F11C2C869D00273903 /* TDLTblCellView.m */; };
 		B4032AC21C5E887300AA82EF /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B49394DD1C5CAAB000362692 /* TDLBtnNew.m */; };
 		B49394DE1C5CAAB000362692 /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B49394DD1C5CAAB000362692 /* TDLBtnNew.m */; };
+		B4F8600D1C60958F002B5D14 /* TDLDataSourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F860091C609476002B5D14 /* TDLDataSourceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		B4032A7E1C5E85E100AA82EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49394DC1C5CAAB000362692 /* TDLBtnNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLBtnNew.h; path = Classes/TDLBtnNew.h; sourceTree = "<group>"; };
 		B49394DD1C5CAAB000362692 /* TDLBtnNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLBtnNew.m; path = Classes/TDLBtnNew.m; sourceTree = "<group>"; };
+		B4F860091C609476002B5D14 /* TDLDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLDataSourceDelegate.h; path = Classes/TDLDataSourceDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				052846F11C2C869D00273903 /* TDLTblCellView.m */,
 				B49394DC1C5CAAB000362692 /* TDLBtnNew.h */,
 				B49394DD1C5CAAB000362692 /* TDLBtnNew.m */,
+				B4F860091C609476002B5D14 /* TDLDataSourceDelegate.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				B4032A961C5E864300AA82EF /* TDLOutlineViewDelegate.h in Headers */,
 				B4032A981C5E864300AA82EF /* TDLTblCellView.h in Headers */,
 				B4032A9A1C5E864300AA82EF /* TDLBtnNew.h in Headers */,
+				B4F8600D1C60958F002B5D14 /* TDLDataSourceDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

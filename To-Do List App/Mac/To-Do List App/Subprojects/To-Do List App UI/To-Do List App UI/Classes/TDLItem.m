@@ -18,13 +18,39 @@
     if (self) {
         _title = aTitle;
         _isCompleted = aCompleted;
+        _uuid = [[NSUUID UUID] UUIDString];
+        _creationDate = [NSDate date];
+        _userName = NSFullUserName();
     }
     return self;
+}
+
+- (id)initWithTitle:(NSString *)aTitle
+          completed:(BOOL)aCompleted
+               UUID:(NSString *)anUUID
+       creationDate:(NSDate *)aCreationDate
+     completionDate:(NSDate *)aCompletionDate
+           userName:(NSString *)anUserName
+   modificationDate:(NSDate *)aModificationDate
+{
+    self = [self init];
+    if (self) {
+        _title = aTitle;
+        _isCompleted = aCompleted;
+        _uuid = anUUID;
+        _creationDate = aCreationDate;
+        _completionDate = aCompletionDate;
+        _userName = anUserName;
+        _modificationDate = aModificationDate;
+    }
+    return self;
+
 }
 
 - (void)setCompleted:(BOOL)aCompleted
 {
     _isCompleted = aCompleted;
+    _completionDate = _isCompleted ? [NSDate date] : nil;
 }
 
 @end
