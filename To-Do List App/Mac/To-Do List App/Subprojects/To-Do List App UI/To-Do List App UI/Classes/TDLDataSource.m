@@ -70,29 +70,35 @@
 
 - (void)addItem:(TDLItem *)anItem
 {
-    NSParameterAssert(anItem);
-    [self.items insertObject:anItem atIndex:0];
-    if (self.delegate) [self.delegate onItemAdded:anItem];
-    
-    [anItem addObserver:self
-             forKeyPath:@"propertiesChanged"
-                options:NSKeyValueObservingOptionNew
-                context:nil];
+    @synchronized(self) {
+        NSParameterAssert(anItem);
+        [self.items insertObject:anItem atIndex:0];
+        if (self.delegate) [self.delegate onItemAdded:anItem];
+        
+        [anItem addObserver:self
+                 forKeyPath:@"propertiesChanged"
+                    options:NSKeyValueObservingOptionNew
+                    context:nil];
+    }
 }
 
 - (void)removeItem:(TDLItem *)anItem
 {
-    NSParameterAssert(anItem);
-    [anItem removeObserver:self forKeyPath:@"propertiesChanged"];
-    [self.items removeObject:anItem];
-    if (self.delegate) [self.delegate onItemRemoved:anItem];
+    @synchronized(self) {
+        NSParameterAssert(anItem);
+        [anItem removeObserver:self forKeyPath:@"propertiesChanged"];
+        [self.items removeObject:anItem];
+        if (self.delegate) [self.delegate onItemRemoved:anItem];
+    }
 }
 
 - (void)removeAll
 {
-    [self unregisterForChangeNotification];
-    [self.items removeAllObjects];
-    if (self.delegate) [self.delegate onAllItemsRemoved];
+    @synchronized(self) {
+        [self unregisterForChangeNotification];
+        [self.items removeAllObjects];
+        if (self.delegate) [self.delegate onAllItemsRemoved];
+    }
 }
 
 #pragma mark - NSObject

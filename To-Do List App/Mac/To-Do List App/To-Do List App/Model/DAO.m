@@ -45,9 +45,11 @@
 
 - (void)save
 {
-    if (self.MOC && [self.MOC commitEditing] && [self.MOC hasChanges]) {
-        NSError *theError = nil;
-        [self.MOC save:&theError];
+    @synchronized(self) {
+        if (self.MOC && [self.MOC commitEditing] && [self.MOC hasChanges]) {
+            NSError *theError = nil;
+            [self.MOC save:&theError];
+        }
     }
 }
 

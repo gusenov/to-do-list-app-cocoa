@@ -8,6 +8,14 @@
 
 #import "TDLTaskTitleField.h"
 
+
+@interface TDLTaskTitleField ()
+
+@property (strong) NSTrackingArea *trackingArea;
+
+@end
+
+
 @implementation TDLTaskTitleField
 
 #pragma mark - TDLTaskTitleField
@@ -41,6 +49,20 @@
     return [super acceptsFirstMouse:anEvent];
 }
 
+- (void)updateTrackingAreas
+{
+    if (self.trackingArea != nil) {
+        [self removeTrackingArea:self.trackingArea];
+        self.trackingArea = nil;
+    }
+    int theOptions = (NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways);
+    self.trackingArea = [ [NSTrackingArea alloc] initWithRect:[self bounds]
+                                                      options:theOptions
+                                                        owner:self
+                                                     userInfo:nil];
+    [self addTrackingArea:self.trackingArea];
+}
+
 #pragma mark - NSResponder 
 
 - (BOOL)resignFirstResponder
@@ -58,6 +80,23 @@
     }
 }
 
+- (void)mouseEntered:(nonnull NSEvent *)anEvent
+{
+    [super mouseEntered:anEvent];
+    
+    NSRect theExpansionRect = [[self cell] expansionFrameWithFrame:self.frame
+                                                         inView:self];
+    BOOL theTruncating = !NSEqualRects(NSZeroRect, theExpansionRect);
+    if (theTruncating) [self setToolTip:self.stringValue];
+}
+
+- (void)mouseExited:(nonnull NSEvent *)anEvent
+{
+    [super mouseExited:anEvent];
+    
+    [self setToolTip:nil];
+}
+
 #pragma mark - NSTextField
 
 - (void)textDidEndEditing:(NSNotification *)aNotification;
@@ -65,6 +104,11 @@
     [super textDidEndEditing:aNotification];
     
     [self setEditable:NO];
+}
+
+- (void)setStringValue:(NSString * __nonnull)aStringValue
+{
+    [super setStringValue:aStringValue];
 }
 
 @end
