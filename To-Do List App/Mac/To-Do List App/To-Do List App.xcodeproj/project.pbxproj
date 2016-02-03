@@ -14,6 +14,8 @@
 		0517480B1C1235400091E2E8 /* To_Do_List_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0517480A1C1235400091E2E8 /* To_Do_List_AppTests.m */; };
 		051748161C1235410091E2E8 /* To_Do_List_AppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 051748151C1235410091E2E8 /* To_Do_List_AppUITests.m */; };
 		B4032AAD1C5E870100AA82EF /* PopupToDoGUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4032AAA1C5E86F800AA82EF /* PopupToDoGUI.framework */; };
+		B434E8471C62897D000AD86E /* PopupToDoGUI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B4032AAA1C5E86F800AA82EF /* PopupToDoGUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B434E8481C628982000AD86E /* PopupStatusBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B4CF50391C5E837D000D728C /* PopupStatusBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B48B94571C5FE6710006026C /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B94561C5FE6710006026C /* DAO.m */; };
 		B498F32E1C4EC75B00C57344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B498F32C1C4EC75B00C57344 /* Main.storyboard */; };
 		B4CF503C1C5E83D7000D728C /* PopupStatusBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CF50391C5E837D000D728C /* PopupStatusBar.framework */; };
@@ -106,6 +108,20 @@
 			remoteInfo = PopupStatusBar;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B434E8401C62896F000AD86E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B434E8481C628982000AD86E /* PopupStatusBar.framework in CopyFiles */,
+				B434E8471C62897D000AD86E /* PopupToDoGUI.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		051747ED1C1235400091E2E8 /* To-Do List App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do List App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +289,7 @@
 				051747E91C1235400091E2E8 /* Sources */,
 				051747EA1C1235400091E2E8 /* Frameworks */,
 				051747EB1C1235400091E2E8 /* Resources */,
+				B434E8401C62896F000AD86E /* CopyFiles */,
 			);
 			buildRules = (
 			);

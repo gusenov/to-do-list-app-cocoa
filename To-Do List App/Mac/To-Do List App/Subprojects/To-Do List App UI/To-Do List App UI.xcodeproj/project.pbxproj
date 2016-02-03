@@ -46,6 +46,9 @@
 		B4032AC01C5E887300AA82EF /* TDLOutlineViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846EE1C2C84DE00273903 /* TDLOutlineViewDelegate.m */; };
 		B4032AC11C5E887300AA82EF /* TDLTblCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846F11C2C869D00273903 /* TDLTblCellView.m */; };
 		B4032AC21C5E887300AA82EF /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B49394DD1C5CAAB000362692 /* TDLBtnNew.m */; };
+		B434E83D1C6284F3000AD86E /* TDLScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = B434E83C1C6284F3000AD86E /* TDLScroller.m */; };
+		B434E83E1C62850A000AD86E /* TDLScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = B434E83B1C6284F3000AD86E /* TDLScroller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B434E83F1C628510000AD86E /* TDLScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = B434E83C1C6284F3000AD86E /* TDLScroller.m */; };
 		B450E7DA1C6249BC00845EEA /* TDLTaskTitleField.m in Sources */ = {isa = PBXBuildFile; fileRef = B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */; };
 		B450E7DB1C624A9D00845EEA /* TDLTaskTitleField.m in Sources */ = {isa = PBXBuildFile; fileRef = B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */; };
 		B450E7DC1C624AA800845EEA /* TDLTaskTitleField.h in Headers */ = {isa = PBXBuildFile; fileRef = B450E7D81C6249BC00845EEA /* TDLTaskTitleField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,6 +100,8 @@
 		B4032A771C5E85E000AA82EF /* PopupToDoGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopupToDoGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4032A7C1C5E85E000AA82EF /* PopupToDoGUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupToDoGUITests.m; sourceTree = "<group>"; };
 		B4032A7E1C5E85E100AA82EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B434E83B1C6284F3000AD86E /* TDLScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLScroller.h; path = Classes/TDLScroller.h; sourceTree = "<group>"; };
+		B434E83C1C6284F3000AD86E /* TDLScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLScroller.m; path = Classes/TDLScroller.m; sourceTree = "<group>"; };
 		B450E7D81C6249BC00845EEA /* TDLTaskTitleField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLTaskTitleField.h; path = Classes/TDLTaskTitleField.h; sourceTree = "<group>"; };
 		B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTaskTitleField.m; path = Classes/TDLTaskTitleField.m; sourceTree = "<group>"; };
 		B49394DC1C5CAAB000362692 /* TDLBtnNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLBtnNew.h; path = Classes/TDLBtnNew.h; sourceTree = "<group>"; };
@@ -199,6 +204,8 @@
 				B49394DD1C5CAAB000362692 /* TDLBtnNew.m */,
 				B450E7D81C6249BC00845EEA /* TDLTaskTitleField.h */,
 				B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */,
+				B434E83B1C6284F3000AD86E /* TDLScroller.h */,
+				B434E83C1C6284F3000AD86E /* TDLScroller.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -251,6 +258,7 @@
 				B4032A9A1C5E864300AA82EF /* TDLBtnNew.h in Headers */,
 				B4F8600D1C60958F002B5D14 /* TDLDataSourceDelegate.h in Headers */,
 				B450E7DC1C624AA800845EEA /* TDLTaskTitleField.h in Headers */,
+				B434E83E1C62850A000AD86E /* TDLScroller.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +395,7 @@
 				057EDD031C2AD086001EEEC0 /* TDLView.m in Sources */,
 				057EDCE51C2A9E0B001EEEC0 /* main.m in Sources */,
 				057EDD001C2AB9FE001EEEC0 /* TDLViewCtrl.m in Sources */,
+				B434E83D1C6284F3000AD86E /* TDLScroller.m in Sources */,
 				052846E91C2C79A700273903 /* TDLItem.m in Sources */,
 				057EDD0F1C2B13F8001EEEC0 /* TDLTblRowView.m in Sources */,
 				057EDD091C2B04E5001EEEC0 /* TDLOutlineView.m in Sources */,
@@ -415,6 +424,7 @@
 				B4032AC01C5E887300AA82EF /* TDLOutlineViewDelegate.m in Sources */,
 				B4032AC11C5E887300AA82EF /* TDLTblCellView.m in Sources */,
 				B4032AC21C5E887300AA82EF /* TDLBtnNew.m in Sources */,
+				B434E83F1C628510000AD86E /* TDLScroller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

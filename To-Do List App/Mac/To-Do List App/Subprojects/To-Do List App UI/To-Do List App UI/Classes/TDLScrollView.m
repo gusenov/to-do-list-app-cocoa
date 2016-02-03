@@ -7,6 +7,7 @@
 //
 
 #import "TDLScrollView.h"
+#import "TDLScroller.h"
 
 @implementation TDLScrollView
 
@@ -30,6 +31,20 @@
 }
 
 #pragma mark - NSView
+
+- (id)initWithFrame:(NSRect)aFrameRect
+{
+    self = [super initWithFrame:aFrameRect];
+    if (self) {
+        [self setHasVerticalScroller:YES];
+        TDLScroller *theVerticalScroller = [[TDLScroller alloc] init];
+        [self setVerticalScroller:theVerticalScroller];
+        
+        [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"to-do_list_app_row_bg"]]];
+    }
+    return self;
+}
 
 - (void)drawRect:(NSRect)aDirtyRect
 {

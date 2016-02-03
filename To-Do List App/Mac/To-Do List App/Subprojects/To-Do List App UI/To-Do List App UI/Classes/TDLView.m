@@ -78,24 +78,11 @@
         _outlineView = [TDLOutlineView new];
         _outlineViewDelegate = [[TDLOutlineViewDelegate alloc] init];
         [_outlineView setDelegate:_outlineViewDelegate];
-
-        NSRect theOutlineViewHeaderFrame = _outlineView.headerView.frame;
-        theOutlineViewHeaderFrame.size.height = 0;
-        _outlineView.headerView.frame = theOutlineViewHeaderFrame;
-        _outlineView.headerView = nil;
-        
-        NSTableColumn *theColumn = [NSTableColumn new];
-        [_outlineView addTableColumn:theColumn];
-
         
         _scrollView = [TDLScrollView new];
         [_scrollView setDocumentView:_outlineView];
-        [_scrollView setHasVerticalScroller:NO];
-        [_scrollView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self.viewsForCstr setObject:_scrollView forKey:@"scrollView"];
-        [self addSubview:_scrollView];
-        [_scrollView setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"to-do_list_app_row_bg"]]];
-        
+        [self addSubview:_scrollView];        
 
         _txtFieldImgView = [NSImageView new];
         [_txtFieldImgView setTranslatesAutoresizingMaskIntoConstraints:NO];

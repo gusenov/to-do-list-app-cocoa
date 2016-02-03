@@ -32,6 +32,14 @@
         [self setBackgroundColor:[NSColor clearColor]];
         [self setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleNone];
 
+        NSRect theOutlineViewHeaderFrame = self.headerView.frame;
+        theOutlineViewHeaderFrame.size.height = 0;
+        self.headerView.frame = theOutlineViewHeaderFrame;
+        self.headerView = nil;
+        
+        NSTableColumn *theColumn = [NSTableColumn new];
+        [self addTableColumn:theColumn];
+
         _contextMenu = [[NSMenu alloc] init];
         [_contextMenu setDelegate:self];
         [self setMenu:_contextMenu];
@@ -115,6 +123,13 @@
     [self beginUpdates];
     [self reloadData];
     [self endUpdates];
+}
+
+#pragma mark - NSResponder
+
+- (void)scrollWheel:(NSEvent *)anEvent
+{
+    [super scrollWheel:anEvent];
 }
 
 @end
