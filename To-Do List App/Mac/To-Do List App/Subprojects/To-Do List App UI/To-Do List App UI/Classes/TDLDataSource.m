@@ -18,6 +18,13 @@
 
 @implementation TDLDataSource
 
+- (void)unregisterForChangeNotification
+{
+    for (TDLItem *theItem in self.items) {
+        [theItem removeObserver:self forKeyPath:@"propertiesChanged"];
+    }
+}
+
 #pragma mark - TDLDataSource
 
 - (id)initWithDelegate:(id<TDLDataSourceDelegate>)aDelegate
@@ -65,6 +72,13 @@
     if (self.delegate) [self.delegate onItemRemoved:anItem];
 }
 
+- (void)removeAll
+{
+    [self unregisterForChangeNotification];
+    [self.items removeAllObjects];
+    if (self.delegate) [self.delegate onAllItemsRemoved];
+}
+
 #pragma mark - NSObject
 
 - (id)init
@@ -78,9 +92,7 @@
 
 - (void)dealloc
 {
-    for (TDLItem *theItem in self.items) {
-        [theItem removeObserver:self forKeyPath:@"propertiesChanged"];
-    }
+    [self unregisterForChangeNotification];
 }
 
 #pragma mark - NSObject(NSKeyValueObserving)

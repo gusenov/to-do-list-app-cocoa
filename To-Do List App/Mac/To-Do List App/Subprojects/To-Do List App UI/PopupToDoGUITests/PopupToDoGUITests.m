@@ -2,8 +2,8 @@
 //  PopupToDoGUITests.m
 //  PopupToDoGUITests
 //
-//  Created by Gussenov on 2/1/16.
-//  Copyright © 2016 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 2/1/16.
+//  Copyright © 2016 Gussenov Lab. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

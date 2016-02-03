@@ -2,7 +2,7 @@
 //  PopupStatusBar.h
 //  PopupStatusBar
 //
-//  Created by Gussenov on 1/31/16.
+//  Created by Abbas Gussenov on 1/31/16.
 //  Copyright © 2016 Gussenov Lab. All rights reserved.
 //
 

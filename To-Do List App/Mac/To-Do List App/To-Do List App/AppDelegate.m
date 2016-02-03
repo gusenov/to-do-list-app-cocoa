@@ -2,14 +2,13 @@
 //  AppDelegate.m
 //  To-Do List App
 //
-//  Created by Abbas on 12/5/15.
-//  Copyright © 2015 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 12/5/15.
+//  Copyright © 2015 Gussenov Lab. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import <PopupStatusBar/PopupStatusBar.h>
 #import <PopupToDoGUI/PopupToDoGUI.h>
-#import "Utils.h"
 #import "DAO.h"
 
 
@@ -34,26 +33,16 @@
         styleMask:128 backing:NSBackingStoreBuffered defer:NO];
     PSBBgView *theBgView = thePanel.contentView;
     theBgView.fillOpacity = 0;
-    theBgView.strokeOpacity = 0;
-    [Utils fillView:thePanel.contentView withAutoresizingSubview:self.viewCtrl.view];
+    theBgView.strokeOpacity = 0;    
+    [self.viewCtrl.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [thePanel.contentView addSubview:self.viewCtrl.view];
 
     self.popupInStatusBar = [[PSBPopupInStatusBar alloc] initWithWindow:thePanel];
+    self.popupInStatusBar.panelCtrl.animation = PSBAnimationAlpha;
     
-
     DAO *theDAO = [[DAO alloc] initWithMOC:self.managedObjectContext];
     self.dataSource = [[TDLDataSource alloc] initWithItems:[theDAO items]];
     self.dataSource.delegate = theDAO;
-
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"buy a mac" completed:NO]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"pick up the kids" completed:YES]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"buy an ipad" completed:NO]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"save psd" completed:NO]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"email david" completed:YES]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"feed the cat" completed:NO]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"get some food" completed:YES]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"return books to the library" completed:NO]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"take out the trash" completed:NO]];
-//    [self.dataSource addItem:[[TDLItem alloc] initWithTitle:@"call the bank" completed:YES]];
 
     [self.viewCtrl setDataSource:self.dataSource];
 }

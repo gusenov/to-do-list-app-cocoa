@@ -2,8 +2,8 @@
 //  PSBPanelCtrl.m
 //  PopupInStatusBar
 //
-//  Created by Abbas on 12/22/15.
-//  Copyright © 2015 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 12/22/15.
+//  Copyright © 2015 Gussenov Lab. All rights reserved.
 //
 
 #import "PSBPanelCtrl.h"
@@ -34,6 +34,8 @@
         [thePanel setLevel:NSPopUpMenuWindowLevel];
         [thePanel setOpaque:NO];
         [thePanel setBackgroundColor:[NSColor clearColor]];
+        
+        self.animation = (PSBAnimationFrame | PSBAnimationAlpha);
         
         _isConstructed = YES;
     }
@@ -93,7 +95,7 @@
     }
     
     if (statusItemView) {
-        theStatusRect = statusItemView.globalRect;
+        theStatusRect = [statusItemView globalRect];
         theStatusRect.origin.y = NSMinY(theStatusRect) - NSHeight(theStatusRect);
     } else {
         theStatusRect.size = NSMakeSize([self.delegate statusItemViewWidth], [[NSStatusBar systemStatusBar] thickness]);
@@ -138,8 +140,10 @@
         thePanelRect.origin.x -= NSMaxX(thePanelRect) - (NSMaxX(theScreenRect) - theBgView.arrowHeight);
     
     [NSApp activateIgnoringOtherApps:NO];
-    [thePanel setAlphaValue:0];
-    [thePanel setFrame:theStatusRect display:YES];
+    
+    if (self.animation & PSBAnimationAlpha) [thePanel setAlphaValue:0];
+    if (self.animation & PSBAnimationFrame) [thePanel setFrame:theStatusRect display:YES];
+    
     [thePanel makeKeyAndOrderFront:nil];
 
 #ifdef DEBUG
@@ -160,8 +164,10 @@
     
     [NSAnimationContext beginGrouping];
     [[NSAnimationContext currentContext] setDuration:self.openDuration];
-    [[thePanel animator] setFrame:thePanelRect display:YES];
-    [[thePanel animator] setAlphaValue:1];
+    
+    [(self.animation & PSBAnimationFrame ? [thePanel animator] : thePanel) setFrame:thePanelRect display:YES];
+    [(self.animation & PSBAnimationAlpha ? [thePanel animator] : thePanel) setAlphaValue:1];
+
     [NSAnimationContext endGrouping];
 }
 

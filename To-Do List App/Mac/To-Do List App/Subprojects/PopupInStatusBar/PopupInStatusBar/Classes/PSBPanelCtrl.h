@@ -2,8 +2,8 @@
 //  PSBPanelCtrl.h
 //  PopupInStatusBar
 //
-//  Created by Abbas on 12/22/15.
-//  Copyright © 2015 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 12/22/15.
+//  Copyright © 2015 Gussenov Lab. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -15,13 +15,17 @@
 @class PSBPanelCtrl;
 
 
+typedef NS_OPTIONS(NSUInteger, PSBAnimation) {
+    PSBAnimationNone      = 0,
+    PSBAnimationFrame     = 1 << 0,
+    PSBAnimationAlpha     = 1 << 1
+};
+
+
 @protocol PSBPanelCtrlDelegate <NSObject>
-
 @optional
-
 - (PSBStatusItemView *)statusItemViewForPanelCtrl:(PSBPanelCtrl *)aPanelCtrl;
 - (float)statusItemViewWidth;
-
 @end
 
 
@@ -32,17 +36,15 @@
 
 @property (nonatomic, unsafe_unretained, readonly) id<PSBPanelCtrlDelegate> delegate;
 @property (nonatomic) BOOL hasActivePanel;
-
 @property (nonatomic) CGFloat popupHeight;
 @property (nonatomic) CGFloat panelWidth;
 @property (nonatomic) NSTimeInterval openDuration;
 @property (nonatomic) NSTimeInterval closeDuration;
+@property (nonatomic) PSBAnimation animation;
 
 - (id)initWithWindow:(PSBPanel *)aWindow
             delegate:(id<PSBPanelCtrlDelegate>)aDelegate;
-
 - (NSRect)statusRectForWindow:(NSWindow *)aWindow;
-
 - (void)openPanel;
 - (void)closePanel;
 

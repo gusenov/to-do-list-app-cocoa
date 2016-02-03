@@ -2,8 +2,8 @@
 //  PSBSearchTxtWin.m
 //  PopupInStatusBar
 //
-//  Created by Abbas on 1/18/16.
-//  Copyright © 2016 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 1/18/16.
+//  Copyright © 2016 Gussenov Lab. All rights reserved.
 //
 
 #import "PSBSearchTxtWin.h"
@@ -15,16 +15,7 @@
 - (void)windowDidResize:(NSNotification *)aNotification
 {
     PSBBgView *theBgView = self.contentView;
-    
-    PSBPanelCtrl *theWinCtrl = self.windowController;
-    NSRect theStatusRect = [theWinCtrl statusRectForWindow:self];
-    NSRect thePanelRect = [self frame];
-    
-    CGFloat theStatusX = roundf(NSMidX(theStatusRect));
-    CGFloat thePanelX = theStatusX - NSMinX(thePanelRect);
-    
-    theBgView.arrowX = thePanelX;
-    
+        
     NSRect theSearchRect = [self.searchTxtView.searchField frame];
     theSearchRect.size.width = NSWidth([theBgView bounds]) - self.searchInset * 2;
     theSearchRect.origin.x = self.searchInset;

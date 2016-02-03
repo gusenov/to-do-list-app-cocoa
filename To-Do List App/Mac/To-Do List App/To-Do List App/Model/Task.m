@@ -2,8 +2,8 @@
 //  Task.m
 //  To-Do List App
 //
-//  Created by Gussenov on 2/2/16.
-//  Copyright © 2016 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 2/2/16.
+//  Copyright © 2016 Gussenov Lab. All rights reserved.
 //
 
 #import "Task.h"

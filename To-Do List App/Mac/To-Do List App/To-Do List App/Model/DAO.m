@@ -98,6 +98,13 @@
     [self.MOC deleteObject:[self taskWithItem:anItem]];
 }
 
+- (void)onAllItemsRemoved
+{
+    for (Task *theTask in [self tasks]) {
+        [self.MOC deleteObject:theTask];
+    }
+}
+
 - (void)onItemChanged:(TDLItem *)anItem
 {
     Task *theChangedTask = [self taskWithItem:anItem];

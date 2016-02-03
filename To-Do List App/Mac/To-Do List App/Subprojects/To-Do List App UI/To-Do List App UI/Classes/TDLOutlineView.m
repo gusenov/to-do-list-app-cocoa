@@ -2,8 +2,8 @@
 //  TDLOutlineView.m
 //  To-Do List App UI
 //
-//  Created by Abbas on 12/23/15.
-//  Copyright © 2015 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 12/23/15.
+//  Copyright © 2015 Gussenov Lab. All rights reserved.
 //
 
 #import "TDLOutlineView.h"
@@ -67,12 +67,21 @@
     NSInteger theMenuIndex = 0;
     
     NSUInteger theIndexOfRowUnderPointer = self.indexOfRowUnderPointer;
+    
     if (theIndexOfRowUnderPointer != -1) {
         [aMenu insertItemWithTitle:@"Delete"
                             action:@selector(removeItem:)
                      keyEquivalent:@""
                            atIndex:theMenuIndex++];
     }
+    
+    if (self.numberOfRows > 0) {
+        [aMenu insertItemWithTitle:@"Delete All"
+                            action:@selector(removeAllTasks:)
+                     keyEquivalent:@""
+                           atIndex:theMenuIndex++];
+    }
+
 }
 
 - (IBAction)removeItem:(id)aSender
@@ -85,6 +94,16 @@
     [self removeItemsAtIndexes:[NSIndexSet indexSetWithIndex:self.indexOfRowUnderPointer]
                       inParent:nil
                  withAnimation:NSTableViewAnimationEffectFade];
+    [self endUpdates];
+}
+
+- (IBAction)removeAllTasks:(id)aSender
+{
+    TDLDataSource *theDataSource = [self dataSource];
+    [theDataSource removeAll];
+    
+    [self beginUpdates];
+    [self reloadData];
     [self endUpdates];
 }
 

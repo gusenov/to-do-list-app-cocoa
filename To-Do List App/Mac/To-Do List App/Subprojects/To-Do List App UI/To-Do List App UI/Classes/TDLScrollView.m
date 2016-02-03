@@ -2,8 +2,8 @@
 //  TDLScrollView.m
 //  To-Do List App UI
 //
-//  Created by Abbas on 12/23/15.
-//  Copyright © 2015 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 12/23/15.
+//  Copyright © 2015 Gussenov Lab. All rights reserved.
 //
 
 #import "TDLScrollView.h"

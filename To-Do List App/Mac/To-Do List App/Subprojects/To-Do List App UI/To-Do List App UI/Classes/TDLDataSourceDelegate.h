@@ -13,6 +13,7 @@
 
 - (void)onItemAdded:(TDLItem *)anItem;
 - (void)onItemRemoved:(TDLItem *)anItem;
+- (void)onAllItemsRemoved;
 - (void)onItemChanged:(TDLItem *)anItem;
 
 @end

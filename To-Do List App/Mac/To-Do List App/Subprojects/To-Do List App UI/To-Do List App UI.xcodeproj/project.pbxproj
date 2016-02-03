@@ -185,13 +185,13 @@
 				052846E81C2C79A700273903 /* TDLItem.m */,
 				052846EA1C2C7A2C00273903 /* TDLDataSource.h */,
 				052846EB1C2C7A2C00273903 /* TDLDataSource.m */,
+				B4F860091C609476002B5D14 /* TDLDataSourceDelegate.h */,
 				052846ED1C2C84DE00273903 /* TDLOutlineViewDelegate.h */,
 				052846EE1C2C84DE00273903 /* TDLOutlineViewDelegate.m */,
 				052846F01C2C869D00273903 /* TDLTblCellView.h */,
 				052846F11C2C869D00273903 /* TDLTblCellView.m */,
 				B49394DC1C5CAAB000362692 /* TDLBtnNew.h */,
 				B49394DD1C5CAAB000362692 /* TDLBtnNew.m */,
-				B4F860091C609476002B5D14 /* TDLDataSourceDelegate.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = Gussenov;
+				ORGANIZATIONNAME = "Gussenov Lab";
 				TargetAttributes = {
 					057EDCDC1C2A9E0B001EEEC0 = {
 						CreatedOnToolsVersion = 7.0;

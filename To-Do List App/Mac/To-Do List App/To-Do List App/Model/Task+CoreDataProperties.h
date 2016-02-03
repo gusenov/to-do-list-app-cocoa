@@ -2,8 +2,8 @@
 //  Task+CoreDataProperties.h
 //  To-Do List App
 //
-//  Created by Gussenov on 2/2/16.
-//  Copyright © 2016 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 2/2/16.
+//  Copyright © 2016 Gussenov Lab. All rights reserved.
 //
 //  Delete this file and regenerate it using "Create NSManagedObject Subclass…"
 //  to keep your implementation up to date with your model.

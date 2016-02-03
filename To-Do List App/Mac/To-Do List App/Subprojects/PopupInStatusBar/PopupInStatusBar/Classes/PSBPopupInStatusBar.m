@@ -2,19 +2,14 @@
 //  PSBPopupInStatusBar.m
 //  PopupInStatusBar
 //
-//  Created by Abbas on 1/7/16.
-//  Copyright © 2016 Gussenov. All rights reserved.
+//  Created by Abbas Gussenov on 1/7/16.
+//  Copyright © 2016 Gussenov Lab. All rights reserved.
 //
 
 #import "PSBPopupInStatusBar.h"
-#import "PSBMenuBarCtrl.h"
 
 
 @interface PSBPopupInStatusBar ()
-
-@property (nonatomic, strong) PSBMenuBarCtrl *menuBarCtrl;
-@property (nonatomic, strong) PSBPanelCtrl *panelCtrl;
-
 @end
 
 
@@ -36,10 +31,10 @@ void *kContextActivePanel = &kContextActivePanel;
     
     self = [super init];
     if (self) {
-        self.menuBarCtrl = [[PSBMenuBarCtrl alloc] initWithImg:[NSImage imageNamed:@"Status"]
-                                                        altImg:[NSImage imageNamed:@"StatusHighlighted"]
-                                                           act:@selector(togglePanel:)
-                                                        target:self];
+        _menuBarCtrl = [[PSBMenuBarCtrl alloc] initWithImg:[NSImage imageNamed:@"Status"]
+                                                    altImg:[NSImage imageNamed:@"StatusHighlighted"]
+                                                       act:@selector(togglePanel:)
+                                                    target:self];
         
         _panelCtrl = [[PSBPanelCtrl alloc] initWithWindow:aWindow
                                                  delegate:self];

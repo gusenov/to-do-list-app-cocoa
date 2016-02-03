@@ -20,5 +20,6 @@
 
 - (void)addItem:(TDLItem *)anItem;
 - (void)removeItem:(TDLItem *)anItem;
+- (void)removeAll;
 
 @end
