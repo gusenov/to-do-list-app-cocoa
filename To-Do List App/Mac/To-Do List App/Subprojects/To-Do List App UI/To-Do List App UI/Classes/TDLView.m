@@ -78,11 +78,6 @@
         _outlineView = [TDLOutlineView new];
         _outlineViewDelegate = [[TDLOutlineViewDelegate alloc] init];
         [_outlineView setDelegate:_outlineViewDelegate];
-        _outlineView.focusRingType = NSFocusRingTypeNone;
-        [_outlineView setGridStyleMask:NSTableViewGridNone];
-        [_outlineView setIntercellSpacing:NSMakeSize(0, 0)];
-        [_outlineView setBackgroundColor:[NSColor clearColor]];
-        [_outlineView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleNone];
 
         NSRect theOutlineViewHeaderFrame = _outlineView.headerView.frame;
         theOutlineViewHeaderFrame.size.height = 0;
@@ -171,11 +166,21 @@
 {
     NSText *theFieldEditor = [[aNotification userInfo] objectForKey:@"NSFieldEditor"];
     NSString *theSearchString = theFieldEditor.string;
-    NSLog(@"Search for ‘%@’…", theSearchString);
+//    NSLog(@"Search for ‘%@’…", theSearchString);
+    
+    self.dataSource.searchKeyword = theSearchString;
+    [self.outlineView reloadData];
 }
 
 - (IBAction)addNewItem:(id)aSender
 {
+    if (self.taskTxtField.stringValue.length > 0) {
+        [self.taskTxtField setStringValue:@""];
+        self.dataSource.searchKeyword = nil;
+        [self.outlineView reloadData];
+        [[[self.taskTxtField cell] cancelButtonCell] performClick:self];
+    }
+    
     TDLItem *theItem = [[TDLItem alloc] initWithTitle:@"" completed:NO];
     [self.dataSource addItem:theItem];
     
@@ -188,6 +193,7 @@
     [self.outlineView endUpdates];
     
     TDLTblCellView *theCell = [self.outlineView viewAtColumn:0 row:0 makeIfNecessary:NO];
+    [theCell.textField setEditable:YES];
     [theCell.textField.window makeFirstResponder:theCell.textField];
 }
 

@@ -43,6 +43,14 @@
     aTask.modification = anItem.modificationDate;
 }
 
+- (void)save
+{
+    if (self.MOC && [self.MOC commitEditing] && [self.MOC hasChanges]) {
+        NSError *theError = nil;
+        [self.MOC save:&theError];
+    }
+}
+
 #pragma mark - DAO
 
 - (id)initWithMOC:(NSManagedObjectContext *)aMOC
@@ -91,11 +99,15 @@
     Task *theNewTask = [[Task alloc] initWithEntity:[NSEntityDescription entityForName:@"Task" inManagedObjectContext:self.MOC]
                      insertIntoManagedObjectContext:self.MOC];
     [self fromItem:anItem toTask:theNewTask];
+    
+    [self save];
 }
 
 - (void)onItemRemoved:(TDLItem *)anItem
 {
     [self.MOC deleteObject:[self taskWithItem:anItem]];
+    
+    [self save];
 }
 
 - (void)onAllItemsRemoved
@@ -103,12 +115,16 @@
     for (Task *theTask in [self tasks]) {
         [self.MOC deleteObject:theTask];
     }
+    
+    [self save];
 }
 
 - (void)onItemChanged:(TDLItem *)anItem
 {
     Task *theChangedTask = [self taskWithItem:anItem];
     [self fromItem:anItem toTask:theChangedTask];
+    
+    [self save];
 }
 
 

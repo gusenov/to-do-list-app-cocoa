@@ -7,6 +7,7 @@
 //
 
 #import "TDLTblCellView.h"
+#import "TDLTaskTitleField.h"
 
 
 @interface TDLTblCellView ()
@@ -17,7 +18,7 @@
 
 @property BOOL isConstructed;
 
-@property (strong) NSTextField *titleTxtField;
+@property (strong) TDLTaskTitleField *titleTxtField;
 @property (strong) NSButton *boxImgView;
 @property (strong) NSImageView *strikeImgView;
 
@@ -55,13 +56,13 @@
         [_strikeImgView setImage:[NSImage imageNamed:@"to-do_list_app_strike"]];
         [self.viewsForCstr setObject:_strikeImgView forKey:@"strikeImgView"];
         
-        _titleTxtField = [NSTextField new];
+        _titleTxtField = [TDLTaskTitleField new];
         [self setTextField:_titleTxtField];
         [self.textField setAlignment:NSTextAlignmentCenter];
         [self.textField setBezeled:NO];
         [self.textField setBackgroundColor:[NSColor clearColor]];
 //        [self.textField setDrawsBackground:NO];
-//        [self.textField setEditable:NO];
+        [self.textField setEditable:NO];
 //        [self.textField setSelectable:NO];
         [self.textField setBordered:NO];
         [self.textField setFocusRingType:NSFocusRingTypeNone];
@@ -123,7 +124,7 @@
                                                             black:0.35
                                                             alpha:0.3]];
         [self.textField.window makeFirstResponder:nil];
-        [self.textField setEditable:NO];
+        [self.titleTxtField setEditMode:NO];
     } else {
         [_boxImgView setImage:[NSImage imageNamed:@"to-do_list_app_box_uncheked"]];
         [_strikeImgView removeFromSuperview];
@@ -132,7 +133,7 @@
                                                            yellow:0.49
                                                             black:0.35
                                                             alpha:1]];
-        [self.textField setEditable:YES];
+        [self.titleTxtField setEditMode:YES];
         [self.textField.window makeFirstResponder:self.textField];
     }
     

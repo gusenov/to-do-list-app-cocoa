@@ -21,8 +21,24 @@
 - (void)unregisterForChangeNotification
 {
     for (TDLItem *theItem in self.items) {
-        [theItem removeObserver:self forKeyPath:@"propertiesChanged"];
+        [theItem removeObserver:self
+                     forKeyPath:@"propertiesChanged"];
     }
+}
+
+- (NSArray *)visibleItems
+{
+    NSArray *theVisibleItems = [self.items objectsAtIndexes:[self.items indexesOfObjectsPassingTest:
+        ^BOOL(TDLItem *anItem, NSUInteger anIdx, BOOL *aStop) {
+            BOOL theResult = YES;
+            if (self.searchKeyword && self.searchKeyword.length != 0) {
+                theResult = [anItem.title rangeOfString:self.searchKeyword
+                    options:NSCaseInsensitiveSearch].location != NSNotFound ? YES : NO;
+            }
+            return theResult;
+    }]];
+
+    return theVisibleItems;
 }
 
 #pragma mark - TDLDataSource
@@ -107,17 +123,21 @@
 
 #pragma mark - NSOutlineViewDataSource
 
-- (NSInteger)outlineView:(NSOutlineView *)anOutlineView numberOfChildrenOfItem:(TDLItem *)anItem
+- (NSInteger)outlineView:(NSOutlineView *)anOutlineView
+  numberOfChildrenOfItem:(TDLItem *)anItem
 {
-    return self.items.count;
+    return [self visibleItems].count;
 }
 
-- (id)outlineView:(NSOutlineView *)anOutlineView child:(NSInteger)anIdx ofItem:(TDLItem *)anItem
+- (id)outlineView:(NSOutlineView *)anOutlineView
+            child:(NSInteger)anIdx
+           ofItem:(TDLItem *)anItem
 {
-    return [self.items objectAtIndex:anIdx];
+    return [[self visibleItems] objectAtIndex:anIdx];
 }
 
-- (BOOL)outlineView:(NSOutlineView *)anOutlineView isItemExpandable:(TDLItem *)anItem
+- (BOOL)outlineView:(NSOutlineView *)anOutlineView
+   isItemExpandable:(TDLItem *)anItem
 {
     return NO;
 }

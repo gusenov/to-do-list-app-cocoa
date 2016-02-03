@@ -46,6 +46,9 @@
 		B4032AC01C5E887300AA82EF /* TDLOutlineViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846EE1C2C84DE00273903 /* TDLOutlineViewDelegate.m */; };
 		B4032AC11C5E887300AA82EF /* TDLTblCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 052846F11C2C869D00273903 /* TDLTblCellView.m */; };
 		B4032AC21C5E887300AA82EF /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B49394DD1C5CAAB000362692 /* TDLBtnNew.m */; };
+		B450E7DA1C6249BC00845EEA /* TDLTaskTitleField.m in Sources */ = {isa = PBXBuildFile; fileRef = B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */; };
+		B450E7DB1C624A9D00845EEA /* TDLTaskTitleField.m in Sources */ = {isa = PBXBuildFile; fileRef = B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */; };
+		B450E7DC1C624AA800845EEA /* TDLTaskTitleField.h in Headers */ = {isa = PBXBuildFile; fileRef = B450E7D81C6249BC00845EEA /* TDLTaskTitleField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B49394DE1C5CAAB000362692 /* TDLBtnNew.m in Sources */ = {isa = PBXBuildFile; fileRef = B49394DD1C5CAAB000362692 /* TDLBtnNew.m */; };
 		B4F8600D1C60958F002B5D14 /* TDLDataSourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F860091C609476002B5D14 /* TDLDataSourceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -94,6 +97,8 @@
 		B4032A771C5E85E000AA82EF /* PopupToDoGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopupToDoGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4032A7C1C5E85E000AA82EF /* PopupToDoGUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupToDoGUITests.m; sourceTree = "<group>"; };
 		B4032A7E1C5E85E100AA82EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B450E7D81C6249BC00845EEA /* TDLTaskTitleField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLTaskTitleField.h; path = Classes/TDLTaskTitleField.h; sourceTree = "<group>"; };
+		B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLTaskTitleField.m; path = Classes/TDLTaskTitleField.m; sourceTree = "<group>"; };
 		B49394DC1C5CAAB000362692 /* TDLBtnNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLBtnNew.h; path = Classes/TDLBtnNew.h; sourceTree = "<group>"; };
 		B49394DD1C5CAAB000362692 /* TDLBtnNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDLBtnNew.m; path = Classes/TDLBtnNew.m; sourceTree = "<group>"; };
 		B4F860091C609476002B5D14 /* TDLDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDLDataSourceDelegate.h; path = Classes/TDLDataSourceDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +197,8 @@
 				052846F11C2C869D00273903 /* TDLTblCellView.m */,
 				B49394DC1C5CAAB000362692 /* TDLBtnNew.h */,
 				B49394DD1C5CAAB000362692 /* TDLBtnNew.m */,
+				B450E7D81C6249BC00845EEA /* TDLTaskTitleField.h */,
+				B450E7D91C6249BC00845EEA /* TDLTaskTitleField.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 				B4032A981C5E864300AA82EF /* TDLTblCellView.h in Headers */,
 				B4032A9A1C5E864300AA82EF /* TDLBtnNew.h in Headers */,
 				B4F8600D1C60958F002B5D14 /* TDLDataSourceDelegate.h in Headers */,
+				B450E7DC1C624AA800845EEA /* TDLTaskTitleField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +393,7 @@
 				B49394DE1C5CAAB000362692 /* TDLBtnNew.m in Sources */,
 				057EDD121C2B1F74001EEEC0 /* TDLWinCtrl.m in Sources */,
 				057EDCE21C2A9E0B001EEEC0 /* AppDelegate.m in Sources */,
+				B450E7DA1C6249BC00845EEA /* TDLTaskTitleField.m in Sources */,
 				052846EF1C2C84DE00273903 /* TDLOutlineViewDelegate.m in Sources */,
 				052846EC1C2C7A2C00273903 /* TDLDataSource.m in Sources */,
 			);
@@ -394,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B450E7DB1C624A9D00845EEA /* TDLTaskTitleField.m in Sources */,
 				B4032AB81C5E887300AA82EF /* TDLViewCtrl.m in Sources */,
 				B4032AB91C5E887300AA82EF /* TDLView.m in Sources */,
 				B4032ABA1C5E887300AA82EF /* TDLOutlineView.m in Sources */,

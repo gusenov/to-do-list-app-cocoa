@@ -53,9 +53,7 @@
     _completionDate = _isCompleted ? [NSDate date] : nil;
 }
 
-- (id)propertiesChanged {
-    return nil;
-}
+- (id)propertiesChanged { return nil; }
 
 + (NSSet *)keyPathsForValuesAffectingPropertiesChanged
 {

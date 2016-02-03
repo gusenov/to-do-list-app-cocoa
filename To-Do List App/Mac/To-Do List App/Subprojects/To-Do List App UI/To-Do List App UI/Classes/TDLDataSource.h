@@ -14,6 +14,7 @@
 @interface TDLDataSource : NSObject <NSOutlineViewDataSource>
 
 @property (strong) id<TDLDataSourceDelegate> delegate;
+@property (strong) NSString *searchKeyword;
 
 - (id)initWithDelegate:(id<TDLDataSourceDelegate>)aDelegate;
 - (id)initWithItems:(NSArray *)anItems;

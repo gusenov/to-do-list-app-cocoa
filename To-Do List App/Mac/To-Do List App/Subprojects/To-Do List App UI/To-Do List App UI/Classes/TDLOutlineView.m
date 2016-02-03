@@ -26,12 +26,22 @@
 - (void)constructor
 {
     if (!_isConstructed) {
+        self.focusRingType = NSFocusRingTypeNone;
+        [self setGridStyleMask:NSTableViewGridNone];
+        [self setIntercellSpacing:NSMakeSize(0, 0)];
+        [self setBackgroundColor:[NSColor clearColor]];
+        [self setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleNone];
+
         _contextMenu = [[NSMenu alloc] init];
         [_contextMenu setDelegate:self];
         [self setMenu:_contextMenu];
         
         _isConstructed = YES;
     }
+}
+
+- (void)drawContextMenuHighlightForRow:(int)aRow
+{
 }
 
 #pragma mark - NSView
